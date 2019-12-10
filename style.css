@@ -84,8 +84,49 @@
     width: 80%;
 }
 
-#intro p{
+#intro p {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     text-align: justify;
+}
+
+
+/* --------------------- Femme 1 -------------------- */
+#femme1 {
+    height: 200vh;
+}
+
+#femme1 .textContainer {
+    position: absolute;
+    top: 550vh;
+    left: -100px;
+    background: black;
+    width: 40%;
+    height: 100vh;
+    transform: rotate(45deg);
+}
+
+#femme1 .text {
+    transform: rotate(-45deg);
+    width: 70%;
+    height: 60vh;
+    margin: 75px 0 0 90px;
+    z-index: 5;
+}
+
+#femme1 .text p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 18px;
+    text-align: justify;
+}
+
+#femme1 .photo {
+    position: absolute;
+    top: 520vh;
+    right: -100px;
+    background: lightgrey;
+    width: 40%;
+    height: 100vh;
+    transform: rotate(45deg); 
 }
