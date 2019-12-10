@@ -34,4 +34,5 @@ window.onscroll = function () {
     }
 
     photo2.style.width = photo2Width + "%";
+
 }

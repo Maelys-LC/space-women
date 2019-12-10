@@ -1,48 +1,90 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
+
+/* ---------------------------- Accueil --------------------------- */
 #accueil {
     background: black;
     color: white;
     font-size: 200px;
+    font-family: 'Anton', sans-serif;
+
+    height: 400vh;
+    position: relative;
+}
+
+#accueil .titre {
+    background: black;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    position: fixed;
+    z-index: 4;
+}
+
+#accueil .titre h1 {
+    margin: 20px 0 0 30px;
+}
+
+#accueil .photo1 {
+    background: black;
+    position: fixed;
+    overflow-x: hidden;
+    z-index: 3;
+}
+
+#accueil .photo1 img {
+    width: 100vw;
+}
+
+#accueil .photo2 {   
+    background: black;
+    position: fixed;    
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+#accueil .photo2 img{
+    width: 100vw;
+}
+
+#accueil .quote {
+    padding: 70px 30px 0 30px;
+    height: 30vh ;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
     font-family: 'Space Mono', monospace;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#accueil .quote span {
+    font-size: 30px;
+    font-style: normal;
+}
+
+
+
+/* ------------------------------- Intro ---------------------------- */
+#intro {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#accueil .titre {
-    height: 100vh;
-    width: 100%;
-    padding: 30px 0 0 80px;
-    background: black;
-    overflow-x: hidden;
-    position: fixed;
-    z-index: 3;
+#intro .paragrapheIntro {
+    width: 80%;
 }
 
-#accueil .photo1 {
-    position: fixed;
-    overflow-x: hidden;
-    z-index: 2;
-}
-
-#accueil .photo1 img {
-    height: 60vh;
-}
-
-#accueil .photo2 {   
-    position: fixed;
-    z-index: 1;
-}
-
-#accueil .photo2 img{
-    height: 60vh;
-}
-
-#test {
-    height: 1000vh;
+#intro p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    text-align: justify;
 }
