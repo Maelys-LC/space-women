@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#accueil {
+    background: black;
+    color: white;
+    font-size: 200px;
+    height: 1000vh;
+    display: flex;
+    justify-content: left;
+}
+
+#accueil .titre {
+    background: black;
+    overflow-x: hidden;
+    position: fixed;
+    z-index: 1;
+}
+
+#accueil .photo1 {
+    position: absolute;
+    top: 100px;    
+    display: flex;
+    margin-left: 100px;    
+}
+
+#accueil .photo1 img {
+    position: fixed;
+    width: 60%;
+}
+
+#accueil .photo2 {
+    display: none;
+}
+
+
