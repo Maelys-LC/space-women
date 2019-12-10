@@ -1,13 +1,14 @@
 
 window.onscroll = function () {
     var accueil = window.document.getElementById("accueil");
-    var scrolltop = window.scrollY;
+    var scrollScreen = window.scrollY/window.innerHeight; // on divise le nombre de pixel où on a scroll par la taille en pixel de notre écran pour savoir le nombre d'écran qu'on doit a scroll
+    var scrollVH = scrollScreen * 100; // on multiplie notre nombre d'écran scrollé par 100 pour l'avoir en VH
     var titre = accueil.getElementsByClassName("titre")[0];
-    var titreWidth = 100 - scrolltop / 10;
+    var titreWidth = 100 - scrollVH;
     var photo1 = accueil.getElementsByClassName("photo1")[0];
-    var photo1Width = 200 - scrolltop /10;
+    var photo1Width = 200 - scrollVH;
     var photo2 = accueil.getElementsByClassName("photo2")[0];
-    var photo2Width = 300 - scrolltop /10;
+    var photo2Width = 300 - scrollVH;
 
     if (titreWidth < 0) {
         titreWidth = 0;

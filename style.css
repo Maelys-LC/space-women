@@ -11,7 +11,6 @@
     color: white;
     font-size: 200px;
     font-family: 'Anton', sans-serif;
-
     height: 400vh;
     position: relative;
 }
@@ -27,6 +26,7 @@
 
 #accueil .titre h1 {
     margin: 20px 0 0 30px;
+    font-size: 200px;
 }
 
 #accueil .photo1 {
@@ -53,19 +53,20 @@
 
 #accueil .quote {
     padding: 70px 30px 0 30px;
-    height: 30vh ;
+    height: 70vh ;
     color: white;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-style: italic;
     font-family: 'Space Mono', monospace;
     position: sticky;
     top: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 #accueil .quote span {
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
 }
 
