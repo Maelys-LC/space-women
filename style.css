@@ -111,6 +111,7 @@
     width: 70%;
     height: 60vh;
     margin: 75px 0 0 90px;
+    padding-top: 10px;
     z-index: 5;
 }
 
@@ -129,4 +130,10 @@
     width: 40%;
     height: 100vh;
     transform: rotate(45deg); 
+}
+
+#femme1 .photo img {
+    transform: rotate(-45deg);
+    width: 45%;
+    margin: 150px;
 }
