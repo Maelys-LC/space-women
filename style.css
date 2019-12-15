@@ -2,23 +2,29 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
 
 /* ---------------------------- Accueil --------------------------- */
 #accueil {
-    background: black;
+    background: url(./Images/315354.jpg) no-repeat center /cover;
     color: white;
-    font-size: 200px;
-    font-family: 'Anton', sans-serif;
-    height: 400vh;
+    height: 440vh;
     position: relative;
 }
 
 #accueil .titre {
-    background: black;
     height: 100vh;
     width: 100%;
+    font-size: 200px;
+    font-family: 'Anton', sans-serif;
+    color: #EBDDDA;
     overflow-x: hidden;
     position: fixed;
     z-index: 4;
@@ -30,7 +36,7 @@
 }
 
 #accueil .photo1 {
-    background: black;
+    background: #685859;
     position: fixed;
     overflow-x: hidden;
     z-index: 3;
@@ -41,7 +47,7 @@
 }
 
 #accueil .photo2 {   
-    background: black;
+    background: #685859;
     position: fixed;    
     overflow-x: hidden;
     z-index: 2;
@@ -51,89 +57,150 @@
     width: 100vw;
 }
 
-#accueil .quote {
-    padding: 70px 30px 0 30px;
-    height: 70vh ;
-    color: white;
-    text-align: center;
-    font-size: 30px;
-    font-style: italic;
-    font-family: 'Space Mono', monospace;
+#accueil .blogQuote {
+    height: 100vh ;
+    background: #685859;
     position: sticky;
     top: 0;
     z-index: 1;
-    overflow: hidden;
+    display: flex;
+   
 }
 
-#accueil .quote span {
+#accueil .quote {
+    width: 50%;
+    padding: 160px 30px 0 30px;
+    margin-right: 30px;
+    color: #EBDDDA;
+    text-align: justify;
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+#accueil .quote .mark {
+    font-size: 120px;
+    color: #5A7681;
+}
+
+#accueil .quote .source {
     font-size: 20px;
     font-style: normal;
 }
 
+#accueil .blogQuote img {
+    transform: translateY(60%);
+}
 
 
 /* ------------------------------- Intro ---------------------------- */
 #intro {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #intro .paragrapheIntro {
-    width: 80%;
-}
-
-#intro p {
+    padding: 100px 0 0 30px;
+    width: 45%;
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    text-align: justify;
+    font-size: 36px;
+    text-align: left;
+    text-indent: 10%;
+    color: #685859;
+}
+
+#intro span {
+    font-size: 64px;
+    color: #5A7681;
 }
 
 
-/* --------------------- Femme 1 -------------------- */
-#femme1 {
-    height: 200vh;
+
+
+#JetPropulsionLab .textContainer{
+    background: #685859;
+    width: 450px;
+    height: 450px;
+    transform: translateY(60%) translateX(-20%) rotate(45deg);
+    transition: .5s;
 }
 
-#femme1 .textContainer {
-    position: absolute;
-    top: 550vh;
-    left: -100px;
-    background: black;
-    width: 40%;
-    height: 100vh;
-    transform: rotate(45deg);
-}
-
-#femme1 .text {
+#JetPropulsionLab .text {
     transform: rotate(-45deg);
-    width: 70%;
-    height: 60vh;
-    margin: 75px 0 0 90px;
-    padding-top: 10px;
-    z-index: 5;
+    width: 100%;
+    padding-top: 75px;
+    padding-left: 160px;        
 }
 
-#femme1 .text p {
+#JetPropulsionLab .text h1 {
+    color: #EBDDDA;
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+}
+
+#JetPropulsionLab .text p {
+    display: none;
+    width: 120%;
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: #685859;
     font-size: 18px;
     text-align: justify;
 }
 
-#femme1 .photo {
+#JetPropulsionLab .textContainer:hover {
+    transform: rotate(0deg);
+    background: transparent;
+}
+
+#JetPropulsionLab .textContainer:hover .text {
+    transform: translateY(30%) rotate(0deg);
+    height: 90vh;
+}
+
+#JetPropulsionLab .textContainer:hover h1 {
+    color: #685859;
+    font-size: 36px;
+}
+
+#JetPropulsionLab .textContainer:hover p {
+    display: block;
+}
+
+#JetPropulsionLab .photo {
+    background: #EBDDDA;
+    height: 700px;
+    width: 700px;
+    transform: translateY(-60%) translateX(100%) rotate(45deg);
+} 
+
+#JetPropulsionLab .photo1 {
+    transform: rotate(-45deg);
+}
+
+/* --------------------- JetPropulsionLab -------------------- */
+
+
+/* #JetPropulsionLab .photo {
     position: absolute;
-    top: 520vh;
+    top: 570vh;
     right: -100px;
-    background: lightgrey;
-    width: 40%;
+    background: #EBDDDA;
+    width: 80%;
     height: 100vh;
     transform: rotate(45deg); 
 }
 
-#femme1 .photo img {
+#JetPropulsionLab .photo img {
     transform: rotate(-45deg);
-    width: 45%;
+    width: 50%;
     margin: 150px;
 }
+
+#JetPropulsionLab .photo p {
+    display: none;
+    transform: rotate(-45deg);
+    color: black;
+} */
+
+
+
+

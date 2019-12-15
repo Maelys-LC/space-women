@@ -1,4 +1,5 @@
 
+// -------------------------------- Intro------------------------------------
 window.onscroll = function () {
     var accueil = window.document.getElementById("accueil");
     var scrollScreen = window.scrollY/window.innerHeight; // on divise le nombre de pixel où on a scroll par la taille en pixel de notre écran pour savoir le nombre d'écran qu'on doit a scroll
@@ -6,9 +7,9 @@ window.onscroll = function () {
     var titre = accueil.getElementsByClassName("titre")[0];
     var titreWidth = 100 - scrollVH; // pour modifier la largeur de la div titre en fonction de combien on a scroll
     var photo1 = accueil.getElementsByClassName("photo1")[0];
-    var photo1Width = 200 - scrollVH; // pour modifier la largeur de la div photo1 en fonction de combien on a scroll
+    var photo1Width = 220 - scrollVH; // pour modifier la largeur de la div photo1 en fonction de combien on a scroll
     var photo2 = accueil.getElementsByClassName("photo2")[0];
-    var photo2Width = 300 - scrollVH; // pour modifier la largeur de la div photo2 en fonction de combien on a scroll
+    var photo2Width = 340 - scrollVH; // pour modifier la largeur de la div photo2 en fonction de combien on a scroll
 
     if (titreWidth < 0) {
         titreWidth = 0;
@@ -37,3 +38,5 @@ window.onscroll = function () {
     photo2.style.width = photo2Width + "%";
 
 }
+
+
