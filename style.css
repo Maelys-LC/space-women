@@ -111,16 +111,19 @@ body {
 }
 
 
+
+/* --------------------- JetPropulsionLab -------------------- */
 #JetPropulsionLab {
-    width: 100vw;
-    /* overflow-x: hidden; */
+    height: 150vh;
 }
 
 #JetPropulsionLab .textContainer{
     background: #685859;
-    width: 450px;
-    height: 450px;
-    transform: translateY(60%) translateX(-20%) rotate(45deg);
+    width: 65vh;
+    height: 65vh;
+    transform: translateY(60%) rotate(45deg);
+    position: relative;
+    left: -70px;
     transition: .5s;
 }
 
@@ -144,6 +147,7 @@ body {
     color: #685859;
     font-size: 18px;
     text-align: justify;
+    text-indent: 10%;
 }
 
 #JetPropulsionLab .textContainer:hover {
@@ -167,39 +171,94 @@ body {
 
 #JetPropulsionLab .photo {
     background: #EBDDDA;
-    height: 700px;
-    width: 700px;
-    transform: translateY(-60%) translateX(100%) rotate(45deg);
+    height: 110vh;
+    width: 110vh;
+    transform: translateY(-60%) rotate(45deg);
+    position: absolute;
+    right: -30px;
 } 
 
 #JetPropulsionLab .photo1 {
-    transform: rotate(-45deg) translateY(10%);
-}
-
-/* --------------------- JetPropulsionLab -------------------- */
-
-
-/* #JetPropulsionLab .photo {
+    transform: rotate(-45deg) translateY(50%);
     position: absolute;
-    top: 570vh;
-    right: -100px;
-    background: #EBDDDA;
+    right: 30px;
+}
+
+#JetPropulsionLab .photo2 {
     width: 80%;
+    transform: rotate(-45deg) translateY(30%) translateX(-200px);
+}
+
+
+/* ----------------------------Dorothy Vaughan----------------- */
+#DorothyVaughan .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+#DorothyVaughan .container .blogPhoto {
+    width: 40%;
+}
+
+#DorothyVaughan .container .blogPhoto h1 {
+    text-align: right;
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    color: #685859;
+}
+
+#DorothyVaughan .container .blogPhoto img {
+    width: 100%;
+}
+
+#DorothyVaughan .container .blogText {
+    width: 60%;
+    padding: 70px 0 0 50px;
+}
+
+#DorothyVaughan .container .blogText h1 {
+    text-align: left;
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    color: #5A7681;
+}
+
+#DorothyVaughan .container .blogText p {
+    font-family: 'Roboto', sans-serif;
+    color: #685859;
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 10%;
+}
+
+#DorothyVaughan .photoDorothy {
+    width: 40%;
+    transform: translateX(90%) translateY(-20%);
+}
+
+
+#DorothyVaughan .rectangle {
+    background: #EBDDDA;
+    width: 100%;
     height: 100vh;
-    transform: rotate(45deg); 
+    transform: rotate(45deg);
+    position: absolute;
+    top: 750vh;
+    left: 20%;
+    z-index: -1;
 }
 
-#JetPropulsionLab .photo img {
-    transform: rotate(-45deg);
-    width: 50%;
-    margin: 150px;
+
+
+/* ---------------------Margaret Hamilton---------------- */
+#MargaretHamilton {
+    display: flex;
 }
 
-#JetPropulsionLab .photo p {
-    display: none;
-    transform: rotate(-45deg);
-    color: black;
-} */
+#MargaretHamilton .container {
+    width: 60%;
+}
 
 
 
