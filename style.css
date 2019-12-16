@@ -172,7 +172,7 @@ header nav a{
 
 #JetPropulsionLab .text {
     transform: rotate(-45deg);
-    width: 100%;
+    width: 90%;
     padding-top: 75px;
     padding-left: 160px;        
 }
@@ -222,14 +222,14 @@ header nav a{
 } 
 
 #JetPropulsionLab .photo1 {
-    transform: rotate(-45deg) translateY(50%);
-    position: absolute;
-    right: 30px;
+    transform: rotate(-45deg) translateY(160%) translateX(130%);
+    /* position: absolute;
+    right: 30px; */
 }
 
 #JetPropulsionLab .photo2 {
     width: 80%;
-    transform: rotate(-45deg) translateY(30%) translateX(-200px);
+    transform: rotate(-45deg) translateY(-50%) translateX(20%);
 }
 
 
@@ -371,9 +371,9 @@ header nav a{
 
 #FrancesNorthcutt .container .photoFrancesOrbit {
     width: 50%;
-    transform: translateY(-10%);
     position: absolute;
     left: 200px;
+    top: 9480px;
 }
 
 #FrancesNorthcutt .container h1 {
@@ -385,7 +385,7 @@ header nav a{
 }
 
 #FrancesNorthcutt .container .date {
-    padding-top: 300px;
+    padding-top: 450px;
 }
 
 #FrancesNorthcutt article {
@@ -407,7 +407,7 @@ header nav a{
     width: 30%;  
     position: absolute;
     right: 0;
-    transform: translateY(-50%);
+    top: 9800px;
     transition: .3s;
 }
 
