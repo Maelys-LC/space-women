@@ -172,7 +172,7 @@ header nav a{
 
 #JetPropulsionLab .text {
     transform: rotate(-45deg);
-    width: 90%;
+    width: 100%;
     padding-top: 75px;
     padding-left: 160px;        
 }
@@ -212,24 +212,24 @@ header nav a{
     display: block;
 }
 
-#JetPropulsionLab .photo {
+#JetPropulsionLab .rectangle {
     background: #EBDDDA;
     height: 110vh;
     width: 110vh;
-    transform: translateY(-60%) rotate(45deg);
+    transform: translateY(-40%) rotate(45deg);
     position: absolute;
     right: -30px;
 } 
 
 #JetPropulsionLab .photo1 {
-    transform: rotate(-45deg) translateY(160%) translateX(130%);
-    /* position: absolute;
-    right: 30px; */
+    position: absolute;
+    right: 0px;
 }
 
 #JetPropulsionLab .photo2 {
-    width: 80%;
-    transform: rotate(-45deg) translateY(-50%) translateX(20%);
+    width: 50%;
+    margin-left: 500px;
+    transform: translateY(-70%);
 }
 
 
