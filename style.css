@@ -185,7 +185,7 @@ header nav a{
 
 #JetPropulsionLab .text p {
     display: none;
-    width: 120%;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
     color: #685859;
     font-size: 18px;
@@ -228,7 +228,8 @@ header nav a{
 
 #JetPropulsionLab .photo2 {
     width: 50%;
-    margin-left: 500px;
+    position: absolute;
+    left: 900px;
     transform: translateY(-70%);
 }
 
