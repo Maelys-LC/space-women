@@ -10,8 +10,6 @@ body {
 
 /* ---------------------------- Accueil --------------------------- */
 #accueil {
-    background: url(./Images/315354.jpg) no-repeat center /cover;
-    color: white;
     height: 440vh;
     position: relative;
 }
@@ -40,7 +38,8 @@ body {
 }
 
 #accueil .photo1 img {
-    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 #accueil .photo2 {   
@@ -51,7 +50,8 @@ body {
 }
 
 #accueil .photo2 img{
-    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 #accueil .blogQuote {
@@ -86,6 +86,7 @@ body {
 }
 
 #accueil .blogQuote img {
+    width: 30%;
     transform: translateY(60%);
 }
 
@@ -100,7 +101,7 @@ body {
     width: 45%;
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
-    text-align: left;
+    text-align: justify;
     text-indent: 10%;
     color: #685859;
 }
@@ -158,6 +159,7 @@ header nav a{
 /* --------------------- JetPropulsionLab -------------------- */
 #JetPropulsionLab {
     height: 150vh;
+    position: relative;
 }
 
 #JetPropulsionLab .textContainer{
@@ -185,7 +187,7 @@ header nav a{
 
 #JetPropulsionLab .text p {
     display: none;
-    width: 100%;
+    width: 25vw;
     font-family: 'Roboto', sans-serif;
     color: #685859;
     font-size: 18px;
@@ -214,8 +216,8 @@ header nav a{
 
 #JetPropulsionLab .rectangle {
     background: #EBDDDA;
-    height: 110vh;
-    width: 110vh;
+    height: 105vh;
+    width: 105vh;
     transform: translateY(-40%) rotate(45deg);
     position: absolute;
     right: -30px;
@@ -224,13 +226,15 @@ header nav a{
 #JetPropulsionLab .photo1 {
     position: absolute;
     right: 0px;
+    bottom: 2%;
+    width: 25vw;
 }
 
 #JetPropulsionLab .photo2 {
     width: 50%;
     position: absolute;
-    left: 900px;
-    transform: translateY(-70%);
+    right: 8%;
+    bottom: 40%;
 }
 
 
@@ -238,17 +242,15 @@ header nav a{
 
 #DorothyVaughan {
     height: 150vh;
+    position: relative;
 }
 
 #DorothyVaughan .container {
-    width: 80%;
+    width: max-content;
     margin: auto;
     display: flex;
 }
 
-#DorothyVaughan .container .blogPhoto {
-    width: 40%;
-}
 
 #DorothyVaughan .container .blogPhoto h1 {
     text-align: right;
@@ -258,12 +260,14 @@ header nav a{
 }
 
 #DorothyVaughan .container .blogPhoto img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 600px;
 }
 
 #DorothyVaughan .container .blogText {
     width: 60%;
     padding: 70px 0 0 50px;
+    max-width: 600px;
 }
 
 #DorothyVaughan .container .blogText h1 {
@@ -293,7 +297,7 @@ header nav a{
     height: 100vh;
     transform: rotate(45deg);
     position: absolute;
-    top: 800vh;
+    top: 50vh;
     left: 20%;
     z-index: -1;
 }
@@ -304,6 +308,7 @@ header nav a{
 #MargaretHamilton {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     height: 120vh;
 }
 
@@ -332,7 +337,7 @@ header nav a{
 }
 
 #MargaretHamilton .photoMargaret {
-    height: 100vh;
+    width: 35vw;
     margin-top: 210px;
 }
 
@@ -359,22 +364,18 @@ header nav a{
 
 /* ---------------------Frances Northcutt----------------- */
 #FrancesNorthcutt {
-    height: 100vh;
+    height: 80vh;
+    position: relative;
 }
 
 #FrancesNorthcutt .container{
     background: #685859;
-    height: 80vh;
+    height: 40vw;
     width: 80%;
     margin-top: 250px;
     transition: .3s;
-}
-
-#FrancesNorthcutt .container .photoFrancesOrbit {
-    width: 50%;
-    position: absolute;
-    left: 200px;
-    top: 9480px;
+    display: block;
+    position: relative;
 }
 
 #FrancesNorthcutt .container h1 {
@@ -383,36 +384,41 @@ header nav a{
     font-size: 70px;
     color: #EBDDDA;   
     margin-left: 30px;
-}
-
-#FrancesNorthcutt .container .date {
-    padding-top: 450px;
+    position: absolute;
+    bottom: 10px;
 }
 
 #FrancesNorthcutt article {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     width: 30%;
     position: absolute;
     right: 0;
-    transform: translateY(-105%);
+    bottom: 5%;
     margin-right: 30px;
     text-align: justify;
     font-family: 'Roboto', sans-serif;
     color: #EBDDDA;
     font-size: 18px;
     text-indent: 10%;
-    transition: .3s;
 }
 
-#FrancesNorthcutt .container .photoFrances {
+#FrancesNorthcutt .container .photoFrancesOrbit {
+    width: 50vw;
+    position: absolute;
+    left: 200px;
+    top: -80px;
+}
+
+#FrancesNorthcutt .photoFrances {
     width: 30%;  
     position: absolute;
     right: 0;
-    top: 9800px;
+    bottom: -10vw;
     transition: .3s;
 }
 
-#FrancesNorthcutt .container:hover .photoFrances {
+#FrancesNorthcutt:hover .photoFrances {
     display: none;
 }
 
@@ -421,7 +427,10 @@ header nav a{
 }
 
 #FrancesNorthcutt .container:hover article {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: .3s;
+    transition-duration: .5s;
 }
 
 
@@ -434,8 +443,8 @@ header nav a{
 
 #BonnieDunbar .rectangle {
     background: #EBDDDA;
-    height: 80vh;
-    width: 100vh;
+    height: 600px;
+    width: 700px;
     transform: translateY(90%) rotate(45deg);
     position: relative;
     left: -90px;
@@ -463,6 +472,7 @@ header nav a{
 
 #BonnieDunbar .espace {
     transform: translateY(40%);
+    width: 40%;
     margin-left: 200px;
     z-index: -5;
 }
