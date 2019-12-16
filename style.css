@@ -111,6 +111,49 @@ body {
 }
 
 
+/* --------------------------Menu--------------------------------- */
+
+
+header {
+    display: inline;
+    position: sticky;
+    top: 70px;
+    
+}
+
+header img {
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 5%;
+    z-index: 101;
+}
+
+header nav {
+    display: none;
+}
+
+header:hover nav {
+    background: #EBDDDA;
+    height: 50vh;
+    width: 20%;
+    position: sticky;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    z-index: 99;
+}
+
+header nav a{
+    color: #685859;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-decoration: none;    
+    z-index: 100;
+}
+
 
 /* --------------------- JetPropulsionLab -------------------- */
 #JetPropulsionLab {
@@ -191,6 +234,11 @@ body {
 
 
 /* ----------------------------Dorothy Vaughan----------------- */
+
+#DorothyVaughan {
+    height: 150vh;
+}
+
 #DorothyVaughan .container {
     width: 80%;
     margin: auto;
@@ -244,7 +292,7 @@ body {
     height: 100vh;
     transform: rotate(45deg);
     position: absolute;
-    top: 750vh;
+    top: 800vh;
     left: 20%;
     z-index: -1;
 }
@@ -254,11 +302,199 @@ body {
 /* ---------------------Margaret Hamilton---------------- */
 #MargaretHamilton {
     display: flex;
+    justify-content: space-between;
+    height: 120vh;
 }
 
 #MargaretHamilton .container {
     width: 60%;
+    margin-right: 30px;
 }
+
+#MargaretHamilton .container .blogText h1 {
+    text-align: right;
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    color: #685859;
+}
+
+#MargaretHamilton .container .blogText .nom {
+    color: #5A7681;
+}
+
+#MargaretHamilton .container .blogText {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    color: #685859;
+    font-size: 18px;
+    text-indent: 10%;
+}
+
+#MargaretHamilton .photoMargaret {
+    height: 100vh;
+    margin-top: 210px;
+}
+
+#MargaretHamilton .container .photos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 70vh;
+}
+
+#MargaretHamilton .container .photos img { 
+    width: 30vh;
+    height: 30vh;
+}
+
+#MargaretHamilton .container .photos .photo2 {
+    align-self: center;
+}
+
+#MargaretHamilton .container .photos .photo3 {
+    align-self: flex-end;
+}
+
+
+/* ---------------------Frances Northcutt----------------- */
+#FrancesNorthcutt {
+    height: 100vh;
+}
+
+#FrancesNorthcutt .container{
+    background: #685859;
+    height: 80vh;
+    width: 80%;
+    margin-top: 250px;
+    transition: .3s;
+}
+
+#FrancesNorthcutt .container .photoFrancesOrbit {
+    width: 50%;
+    transform: translateY(-10%);
+    position: absolute;
+    left: 200px;
+}
+
+#FrancesNorthcutt .container h1 {
+    text-align: left;
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    color: #EBDDDA;   
+    margin-left: 30px;
+}
+
+#FrancesNorthcutt .container .date {
+    padding-top: 300px;
+}
+
+#FrancesNorthcutt article {
+    display: none;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    transform: translateY(-105%);
+    margin-right: 30px;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    color: #EBDDDA;
+    font-size: 18px;
+    text-indent: 10%;
+    transition: .3s;
+}
+
+#FrancesNorthcutt .container .photoFrances {
+    width: 30%;  
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+
+#FrancesNorthcutt .container:hover .photoFrances {
+    display: none;
+}
+
+#FrancesNorthcutt .container:hover {
+    width: 100%;
+}
+
+#FrancesNorthcutt .container:hover article {
+    display: block;
+}
+
+
+
+
+/* ---------------Bonnie Dunbar------------------- */
+#BonnieDunbar {
+    height: 150vh;
+}
+
+#BonnieDunbar .rectangle {
+    background: #EBDDDA;
+    height: 80vh;
+    width: 100vh;
+    transform: translateY(90%) rotate(45deg);
+    position: relative;
+    left: -90px;
+    z-index: -7;
+}
+
+#BonnieDunbar .titre h1 {
+    text-align: left;
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    color: #685859;  
+    margin-left: 240px;
+}
+
+#BonnieDunbar .titre .nom {
+    color: #5A7681;
+}
+
+#BonnieDunbar .portrait {
+    width: 40%;
+    position: absolute;
+    right: 0;
+    transform: translateY(-40%);
+}
+
+#BonnieDunbar .espace {
+    transform: translateY(40%);
+    margin-left: 200px;
+    z-index: -5;
+}
+
+#BonnieDunbar .blogText {
+    background: #EBDDDA;
+    width: 70%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    padding-left: 150px;
+    z-index: -6;
+}
+
+#BonnieDunbar .blogText img {
+    width: 40%;
+    margin-right: 30px;
+    transform: translateY(20%);
+}
+
+#BonnieDunbar article {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    color: #685859;
+    font-size: 18px;
+    text-indent: 10%;
+    width: 50%;
+    transform: translateY(40%);
+}
+
+    
+    
+
 
 
 
