@@ -723,6 +723,9 @@ footer p {
         padding: 90px 0 0 30px;
         margin: auto;
         width: 90%;
+    }
+
+    #intro .paragrapheIntro p {
         font-size: 24px;
         text-align: center;
     }
