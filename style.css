@@ -776,25 +776,29 @@ footer p {
         position: static;
         width: 100vw;
     }
+
     #JetPropulsionLab .photo2 {
         display: none;
     }
+
+
     /* -------------------------Dorothy Vaughan------------------- */
     #DorothyVaughan {
         height: auto;
-        position: relative;
         overflow-x: hidden;
         padding-bottom: 25vh;
     }
+
     #DorothyVaughan .container {
         width: 100%;
         margin: auto;
-        display: flex;
         flex-direction: column;
     }
+
     #DorothyVaughan .container .blogPhoto .desktop {
         display: none;
     }
+
     #DorothyVaughan .container .blogPhoto .mobile {
         display: block;
         text-align: right;
@@ -802,22 +806,26 @@ footer p {
         height: 20vh;
         margin-top: 50px;
     }
+
     #DorothyVaughan .container .blogPhoto .mobile h1 {
         transform: rotate(5deg);
         color: #EBDDDA;
         margin-right: 10px;
     }
+
     #DorothyVaughan .container .blogPhoto img {
         display: none;
     }
+
     #DorothyVaughan .container .blogText {
         width: auto;
         padding: 20px 10px 0 10px;
-        max-width: 600px;
     }
+
     #DorothyVaughan .container .blogText h1 {
         display: none;
     }
+
     #DorothyVaughan .photoDorothy {
         width: 70%;
         position: relative;
@@ -825,79 +833,66 @@ footer p {
         top: 10px;
         transform: none;
     }
+
     #DorothyVaughan .rectangle {
-        background: #EBDDDA;
-        width: 100%;
         height: 80vh;
-        transform: rotate(45deg);
-        position: absolute;
         top: 15vh;
-        left: 20%;
-        z-index: -1;
     }
+
+
     /* ----------------------Margaret Hamilton------------------ */
     #MargaretHamilton {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
         height: 70vh;
     }
+
     #MargaretHamilton .container {
         width: auto;
         margin-right: 0px;
     }
+
     #MargaretHamilton .container .blogText {
         margin: 0 10px 0 10px;
     }
-    #MargaretHamilton .container .blogText h1 {
-        text-align: right;
-    }
-    #MargaretHamilton .container .blogText .nom {
-        color: #5A7681;
-    }
+
     #MargaretHamilton .photoMargaret {
         display: none;
     }
-    #MargaretHamilton .container .photos {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-        height: 70vh;
-    }
+
     #MargaretHamilton .container .photos img {
         width: 15vh;
         height: 15vh;
-        border-radius: 5px;
     }
+
     #MargaretHamilton .container .photos .photo2 {
         align-self: flex-start;
     }
+
     #MargaretHamilton .container .photos .photo3 {
         align-self: flex-start;
     }
+
+
+
     /* ------------------------Frances Northcutt---------------- */
     #FrancesNorthcutt {
-        height: 80vh;
-        position: relative;
         margin-top: 40vh;
     }
+
     #FrancesNorthcutt .container {
         background: transparent;
         height: auto;
         width: auto;
         margin-top: 20vh;
-        transition: .3s;
-        display: block;
-        position: relative;
     }
+
     #FrancesNorthcutt .container h1 {
         background: #685859;
         text-align: center;
         color: #EBDDDA;
         margin-left: 0px;
         position: static;
-        bottom: 10px;
     }
+
     #FrancesNorthcutt article {
         visibility: visible;
         opacity: 1;
@@ -905,39 +900,45 @@ footer p {
         position: static;
         margin: 20px 10px 20px 10px;
     }
+
     #FrancesNorthcutt article p {
         color: #685859;
     }
+
     #FrancesNorthcutt .container .photoFrancesOrbit {
         display: none;
     }
+
     #FrancesNorthcutt .photoFrances {
         width: 100vw;
         position: static
     }
+
+
+
     /* -----------------------Bonnie Dunbar------------------ */
     #BonnieDunbar {
         height: auto;
         margin-top: 130vh;
-        position: relative;
     }
+
     #BonnieDunbar .rectangle {
         display: none;
     }
+
     #BonnieDunbar .titre h1 {
         transform: rotate(-20deg);
-        text-align: left;
         margin-left: 10px;
     }
-    #BonnieDunbar .titre .nom {
-        color: #5A7681;
-    }
+
     #BonnieDunbar .portrait {
         display: none;
     }
+
     #BonnieDunbar .espace {
         display: none;
     }
+
     #BonnieDunbar .espace-mobile {
         display: block;
         transform: none;
@@ -948,19 +949,19 @@ footer p {
         left: 20%;
         z-index: -5;
     }
+
     #BonnieDunbar .blogText {
         background: transparent;
         width: auto;
         position: static;
-        /* right: 0; */
-        display: flex;
         padding-left: 0px;
-        z-index: -6;
         margin: 0px 10px 0 10px;
     }
+
     #BonnieDunbar .blogText img {
         display: none;
     }
+    
     #BonnieDunbar article {
         width: auto;
         transform: none;
