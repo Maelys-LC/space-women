@@ -10,7 +10,6 @@ html {
 
 body {
     overflow-x: hidden;
-
 }
 
 h1 {
@@ -28,6 +27,7 @@ p {
 }
 
 /* ---------------------------- Accueil --------------------------- */
+
 #accueil {
     height: 440vh;
     position: relative;
@@ -47,34 +47,35 @@ p {
     color: #EBDDDA;
     margin: 20px 0 0 30px;
     -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 @-webkit-keyframes text-focus-in {
     0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
     }
     100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
     }
-  }
-  @keyframes text-focus-in {
+}
+
+@keyframes text-focus-in {
     0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
     }
     100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
     }
-  }
-  
+}
+
 #accueil .titre .blasons {
     display: none;
 }
@@ -91,26 +92,25 @@ p {
     min-height: 100vh;
 }
 
-#accueil .photo2 {   
+#accueil .photo2 {
     background: #685859;
-    position: fixed;    
+    position: fixed;
     overflow-x: hidden;
     z-index: 2;
 }
 
-#accueil .photo2 img{
+#accueil .photo2 img {
     min-width: 100vw;
     min-height: 100vh;
 }
 
 #accueil .blogQuote {
-    height: 100vh ;
+    height: 100vh;
     background: #685859;
     position: sticky;
     top: 0;
     z-index: 1;
     display: flex;
-   
 }
 
 #accueil .quote {
@@ -144,8 +144,8 @@ p {
     transform: translateY(60%);
 }
 
-
 /* ------------------------------- Intro ---------------------------- */
+
 #intro {
     height: 100vh;
 }
@@ -165,8 +165,8 @@ p {
     color: #5A7681;
 }
 
-
 /* --------------------------Menu--------------------------------- */
+
 #navigation {
     position: sticky;
     top: 0;
@@ -174,158 +174,111 @@ p {
     z-index: 110;
 }
 
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #685859;
-  
-  transition: color 0.3s ease;
+#menuToggle a {
+    text-decoration: none;
+    color: #685859;
+    transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
-  color: #5A7681;
+#menuToggle a:hover {
+    color: #5A7681;
 }
 
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
 }
 
 
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span { /* transforme les traits du burger en croix */
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) { /* cache le trait du milieu */
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) { /* fait tourner le dernier trait */
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked~ul { /* pour l'effet de glissade depuis la gauche */
+    transform: none;
+}
 
 
 /* --------------------- JetPropulsionLab -------------------- */
+
 #JetPropulsionLab {
     height: 150vh;
     position: relative;
 }
 
-#JetPropulsionLab .textContainer{
+#JetPropulsionLab .textContainer {
     background: #685859;
     width: 65vh;
     height: 65vh;
@@ -339,7 +292,7 @@ p {
     transform: rotate(-45deg);
     width: 100%;
     padding-top: 75px;
-    padding-left: 160px;        
+    padding-left: 160px;
 }
 
 #JetPropulsionLab .text h1 {
@@ -355,25 +308,6 @@ p {
     width: 25vw;
 }
 
-#JetPropulsionLab .textContainer:hover {
-    transform: rotate(0deg);
-    background: transparent;
-}
-
-#JetPropulsionLab .textContainer:hover .text {
-    transform: translateY(30%) rotate(0deg);
-    height: 90vh;
-}
-
-#JetPropulsionLab .textContainer:hover h1 {
-    color: #685859;
-    font-size: 36px;
-}
-
-#JetPropulsionLab .textContainer:hover p {
-    display: block;
-}
-
 #JetPropulsionLab .rectangle {
     background: #EBDDDA;
     height: 105vh;
@@ -381,7 +315,7 @@ p {
     transform: translateY(-40%) rotate(45deg);
     position: absolute;
     right: -30px;
-} 
+}
 
 #JetPropulsionLab .photo1 {
     position: absolute;
@@ -397,7 +331,6 @@ p {
     bottom: 40%;
 }
 
-
 /* ----------------------------Dorothy Vaughan----------------- */
 
 #DorothyVaughan {
@@ -410,7 +343,6 @@ p {
     margin: auto;
     display: flex;
 }
-
 
 #DorothyVaughan .container .blogPhoto h1 {
     text-align: right;
@@ -441,7 +373,6 @@ p {
     transform: translateX(90%) translateY(-20%);
 }
 
-
 #DorothyVaughan .rectangle {
     background: #EBDDDA;
     width: 100%;
@@ -453,9 +384,8 @@ p {
     z-index: -1;
 }
 
-
-
 /* ---------------------Margaret Hamilton---------------- */
+
 #MargaretHamilton {
     display: flex;
     justify-content: space-between;
@@ -488,13 +418,14 @@ p {
     height: 70vh;
 }
 
-#MargaretHamilton .container .photos img { 
+#MargaretHamilton .container .photos img {
     width: 30vh;
     height: 30vh;
     border-radius: 5px;
 }
 
 #MargaretHamilton .container .photos .photo1 {
+    align-self: flex-start;
     transition: .5s;
 }
 
@@ -520,14 +451,14 @@ p {
     transform: scale(1.4);
 }
 
-
 /* ---------------------Frances Northcutt----------------- */
+
 #FrancesNorthcutt {
     height: 80vh;
     position: relative;
 }
 
-#FrancesNorthcutt .container{
+#FrancesNorthcutt .container {
     background: #685859;
     height: 40vw;
     width: 80%;
@@ -539,7 +470,7 @@ p {
 
 #FrancesNorthcutt .container h1 {
     text-align: left;
-    color: #EBDDDA;   
+    color: #EBDDDA;
     margin-left: 30px;
     position: absolute;
     bottom: 10px;
@@ -567,7 +498,7 @@ p {
 }
 
 #FrancesNorthcutt .photoFrances {
-    width: 30%;  
+    width: 30%;
     position: absolute;
     right: 0;
     bottom: -10vw;
@@ -575,25 +506,8 @@ p {
     transition-duration: .5s;
 }
 
-#FrancesNorthcutt:hover .photoFrances {
-    display: none;
-}
-
-#FrancesNorthcutt .container:hover {
-    width: 100%;
-}
-
-#FrancesNorthcutt .container:hover article {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: .3s;
-    transition-duration: .5s;
-}
-
-
-
-
 /* ---------------Bonnie Dunbar------------------- */
+
 #BonnieDunbar {
     height: 200vh;
     margin-top: 60vh;
@@ -633,6 +547,10 @@ p {
     z-index: -5;
 }
 
+#BonnieDunbar .espace-mobile {
+    display: none;
+}
+
 #BonnieDunbar .blogText {
     background: #EBDDDA;
     width: 70%;
@@ -655,8 +573,8 @@ p {
     transform: translateY(40%);
 }
 
-
 /* ------------------------------Footer-------------------------- */
+
 footer {
     height: 10vh;
     position: relative;
@@ -672,17 +590,49 @@ footer p {
 }
 
 
-/* --------------------------- Responsive --------------------- */
-@media screen and (max-width: 600px) {
+/* --------------------------- Hover---------------------- */
 
+@media screen and (min-width: 600px) {
+    #JetPropulsionLab .textContainer:hover {
+        transform: rotate(0deg);
+        background: transparent;
+    }
+    #JetPropulsionLab .textContainer:hover .text {
+        transform: translateY(30%) rotate(0deg);
+        height: 90vh;
+    }
+    #JetPropulsionLab .textContainer:hover h1 {
+        color: #685859;
+        font-size: 36px;
+    }
+    #JetPropulsionLab .textContainer:hover p {
+        display: block;
+    }
+    #FrancesNorthcutt .container:hover {
+        width: 100%;
+    }
+    #FrancesNorthcutt .container:hover article {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: .3s;
+        transition-duration: .5s;
+    }
+    #FrancesNorthcutt:hover .photoFrances {
+        display: none;
+    }
+}
+
+/* --------------------------- Responsive --------------------- */
+
+@media screen and (max-width: 600px) {
     body {
         display: flex;
         flex-direction: column;
     }
-
     h1 {
         font-size: 40px;
     }
+
 
     /* -----------------------------Accueil--------------------------- */
     #accueil {
@@ -691,15 +641,14 @@ footer p {
     }
 
     #accueil .titre {
-        height: 100vh;
         position: relative;
     }
-    
+
     #accueil .titre h1 {
         text-align: left;
         font-size: 80px;
         margin: 0 0 0 5px;
-    }    
+    }
 
     #accueil .titre .blasons {
         display: inline;
@@ -716,39 +665,41 @@ footer p {
         left: 40vw;
         top: 60vh;
     }
-    
+
     #accueil .photo1 {
         display: none;
     }
-    
+
     #accueil .photo1 img {
         display: none;
     }
-    
-    #accueil .photo2 {   
+
+    #accueil .photo2 {
         display: none;
     }
-    
-    #accueil .photo2 img{
+
+    #accueil .photo2 img {
         display: none;
     }
-    
+
     #accueil .blogQuote {
-        display:none;
-       
-    }    
+        display: none;
+    }
 
     #navigation {
         display: none;
     }
 
+
+
     /* --------------------------Intro-------------------------- */
     #intro {
-        height: 130vh;
+        height: auto;
+        margin-bottom: 20vh;
     }
-    
+
     #intro .paragrapheIntro {
-        padding: 90px 0 0 30px;
+        padding: 90px 0 0 0;
         margin: auto;
         width: 90%;
     }
@@ -757,43 +708,41 @@ footer p {
         font-size: 24px;
         text-align: center;
     }
-    
+
     #intro span {
         font-size: 36px;
     }
 
 
+
     /* -----------------------Jet Propulsion Lab-------------------- */
     #JetPropulsionLab {
-        height: 150vh;
-        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20vh;
     }
-    
-    #JetPropulsionLab .textContainer{
+
+    #JetPropulsionLab .textContainer {
         background: transparent;
         width: auto;
         height: 100vh;
-        transform: translateY(-20%) rotate(0deg);
+        transform: rotate(0deg);
         position: static;
-        /* left: 0;
-        transition: .5s;*/
         z-index: 20;
     }
-    
+
     #JetPropulsionLab .text {
         transform: rotate(0deg);
         width: auto;
         margin: auto;
         padding-top: 0px;
-        padding-left: 0px;  
-    
+        padding-left: 0px;
     }
-    
+
     #JetPropulsionLab .text h1 {
         text-align: left;
+        padding-left: 10px;
     }
 
     #JetPropulsionLab .text .mobile {
@@ -809,104 +758,83 @@ footer p {
         color: #685859;
     }
 
-    
     #JetPropulsionLab .text p {
         display: block;
         text-align: justify;
         width: auto;
         margin: 0 10px 0 10px;
     }
-    
+
     #JetPropulsionLab .rectangle {
-        background: #EBDDDA;
         height: 30vh;
         width: 30vh;
         transform: translateY(60%) rotate(45deg);
-        position: absolute;
         right: 0;
         left: -30px;
-    } 
-    
+    }
     #JetPropulsionLab .photo1 {
-        position: absolute;
-        right: 0px;
-        bottom: 4%;
+        position: static;
         width: 100vw;
     }
-    
     #JetPropulsionLab .photo2 {
         display: none;
     }
-
-
     /* -------------------------Dorothy Vaughan------------------- */
     #DorothyVaughan {
-        height: 160vh;
+        height: auto;
         position: relative;
         overflow-x: hidden;
-        
+        padding-bottom: 25vh;
     }
-    
     #DorothyVaughan .container {
         width: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
     }
-    
-    
     #DorothyVaughan .container .blogPhoto .desktop {
         display: none;
     }
-    
     #DorothyVaughan .container .blogPhoto .mobile {
         display: block;
-        text-align: right;        
+        text-align: right;
         background: #685859;
         height: 20vh;
         margin-top: 50px;
     }
-
     #DorothyVaughan .container .blogPhoto .mobile h1 {
         transform: rotate(5deg);
         color: #EBDDDA;
         margin-right: 10px;
     }
-    
     #DorothyVaughan .container .blogPhoto img {
         display: none;
     }
-    
     #DorothyVaughan .container .blogText {
         width: auto;
         padding: 20px 10px 0 10px;
         max-width: 600px;
     }
-    
     #DorothyVaughan .container .blogText h1 {
         display: none;
     }
-    
     #DorothyVaughan .photoDorothy {
         width: 70%;
-        transform: translateX(0%) translateY(10%);
-        position: absolute;
-        right: 0;
+        position: relative;
+        left: 30%;
+        top: 10px;
+        transform: none;
     }
-    
-    
     #DorothyVaughan .rectangle {
         background: #EBDDDA;
         width: 100%;
         height: 80vh;
         transform: rotate(45deg);
         position: absolute;
-        top: 50vh;
+        top: 15vh;
         left: 20%;
         z-index: -1;
     }
-
-
     /* ----------------------Margaret Hamilton------------------ */
     #MargaretHamilton {
         display: flex;
@@ -914,140 +842,112 @@ footer p {
         align-items: flex-start;
         height: 70vh;
     }
-    
     #MargaretHamilton .container {
         width: auto;
         margin-right: 0px;
     }
-
     #MargaretHamilton .container .blogText {
         margin: 0 10px 0 10px;
     }
-    
     #MargaretHamilton .container .blogText h1 {
         text-align: right;
     }
-    
     #MargaretHamilton .container .blogText .nom {
         color: #5A7681;
-       
     }
-    
     #MargaretHamilton .photoMargaret {
         display: none;
     }
-    
     #MargaretHamilton .container .photos {
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
         height: 70vh;
     }
-    
-    #MargaretHamilton .container .photos img { 
+    #MargaretHamilton .container .photos img {
         width: 15vh;
         height: 15vh;
         border-radius: 5px;
     }
-      
     #MargaretHamilton .container .photos .photo2 {
         align-self: flex-start;
-        
     }
-    
     #MargaretHamilton .container .photos .photo3 {
         align-self: flex-start;
-        
     }
-
-
     /* ------------------------Frances Northcutt---------------- */
     #FrancesNorthcutt {
         height: 80vh;
         position: relative;
+        margin-top: 40vh;
     }
-    
-    #FrancesNorthcutt .container{
+    #FrancesNorthcutt .container {
         background: transparent;
-        height: 40vw;
+        height: auto;
         width: auto;
-        margin-top: 250px;
+        margin-top: 20vh;
         transition: .3s;
         display: block;
         position: relative;
     }
-    
     #FrancesNorthcutt .container h1 {
         background: #685859;
         text-align: center;
-        color: #EBDDDA;   
+        color: #EBDDDA;
         margin-left: 0px;
-        position: absolute;
+        position: static;
         bottom: 10px;
     }
-    
     #FrancesNorthcutt article {
         visibility: visible;
         opacity: 1;
         width: auto;
         position: static;
-        margin: 0px 10px 0 10px;
+        margin: 20px 10px 20px 10px;
     }
-    
     #FrancesNorthcutt article p {
         color: #685859;
-        padding-top: 170px;
     }
-
-    
-    
     #FrancesNorthcutt .container .photoFrancesOrbit {
         display: none;
     }
-    
     #FrancesNorthcutt .photoFrances {
-        width: 100vw;  
-        position: absolute;
-        right: 0;
-        bottom: -200vw;
+        width: 100vw;
+        position: static
     }
-    
-
-
     /* -----------------------Bonnie Dunbar------------------ */
     #BonnieDunbar {
-        height: 130vh;
+        height: auto;
         margin-top: 130vh;
         position: relative;
     }
-    
     #BonnieDunbar .rectangle {
         display: none;
     }
-    
     #BonnieDunbar .titre h1 {
         transform: rotate(-20deg);
         text-align: left;
         margin-left: 10px;
     }
-    
     #BonnieDunbar .titre .nom {
         color: #5A7681;
     }
-    
     #BonnieDunbar .portrait {
         display: none;
     }
-    
     #BonnieDunbar .espace {
-        transform: translateY(290%);
+        display: none;
+    }
+    #BonnieDunbar .espace-mobile {
+        display: block;
+        transform: none;
         width: 80%;
+        margin-top: 10px;
         margin-left: 0px;
-        position: absolute;
-        right: 0;
+        position: relative;
+        left: 20%;
         z-index: -5;
     }
-    
     #BonnieDunbar .blogText {
         background: transparent;
         width: auto;
@@ -1058,30 +958,12 @@ footer p {
         z-index: -6;
         margin: 0px 10px 0 10px;
     }
-    
     #BonnieDunbar .blogText img {
         display: none;
     }
-    
     #BonnieDunbar article {
         width: auto;
-        transform: translateY(20%);
+        transform: none;
+        margin-top: 50px;
     }
-    
-    
-    
-    
-  
-    
-    
-        
-    
-     
 }
-    
-    
-
-
-
-
-

@@ -1,14 +1,14 @@
 
 // -------------------------------- Accueil------------------------------------
-window.onscroll = function () {
+window.onscroll = function () { // fonction appellée à chaque action de scroll
     var accueil = window.document.getElementById("accueil");
-    var scrollScreen = window.scrollY/window.innerHeight; // on divise le nombre de pixel où on a scroll par la taille en pixel de notre écran pour savoir le nombre d'écran qu'on doit a scroll
-    var scrollVH = scrollScreen * 100; // on multiplie notre nombre d'écran scrollé par 100 pour l'avoir en VH
     var titre = accueil.getElementsByClassName("titre")[0];
-    var titreWidth = 100 - scrollVH; // pour modifier la largeur de la div titre en fonction de combien on a scroll
     var photo1 = accueil.getElementsByClassName("photo1")[0];
-    var photo1Width = 220 - scrollVH; // pour modifier la largeur de la div photo1 en fonction de combien on a scroll
     var photo2 = accueil.getElementsByClassName("photo2")[0];
+    var scrollScreen = window.scrollY / window.innerHeight; // on divise le nombre de pixel où on a scroll par la taille en pixel de notre écran pour savoir le nombre d'écran qu'on a scroll
+    var scrollVH = scrollScreen * 100; // on multiplie notre nombre d'écran scrollé par 100 pour l'avoir en VH
+    var titreWidth = 100 - scrollVH; // pour modifier la largeur de la div titre en fonction de combien on a scroll
+    var photo1Width = 220 - scrollVH; // pour modifier la largeur de la div photo1 en fonction de combien on a scroll
     var photo2Width = 340 - scrollVH; // pour modifier la largeur de la div photo2 en fonction de combien on a scroll
     
 
@@ -35,7 +35,7 @@ window.onscroll = function () {
 
    
 
-    if(window.innerWidth > 600) {
+    if (window.innerWidth > 600) {
         titre.style.width = titreWidth + "%";
         photo1.style.width = photo1Width + "%";
         photo2.style.width = photo2Width + "%";
@@ -43,11 +43,15 @@ window.onscroll = function () {
 
     // ------------------------ Menu --------------------------
     var menu = window.document.getElementById("navigation");
-
-    if (scrollVH < 440) {
-        menu.style.position = "sticky";
+    
+    if (window.innerWidth < 600) {
+        menu.style.position = "fixed"; // la valeur "sticky" crée une marge à droite de la page en version mobile
     } else {
-        menu.style.position = "fixed";
+        if (scrollVH < 440) {
+            menu.style.position = "sticky"; // pour ne pas qu'il a apparaisse dans l'écran d'accueil
+        } else {
+            menu.style.position = "fixed"; // la valeur "sticky" entrait en conflit avec les hover des éléments par dessus lesquels le menu devait passer
+        }
     }
 }
 
