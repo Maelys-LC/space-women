@@ -1056,6 +1056,7 @@ footer p {
         display: flex;
         padding-left: 0px;
         z-index: -6;
+        margin: 0px 10px 0 10px;
     }
     
     #BonnieDunbar .blogText img {
