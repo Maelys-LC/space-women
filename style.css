@@ -592,7 +592,7 @@ footer p {
 
 /* --------------------------- Hover---------------------- */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1000px) {
     #JetPropulsionLab .textContainer:hover {
         transform: rotate(0deg);
         background: transparent;
@@ -624,7 +624,7 @@ footer p {
 
 /* --------------------------- Responsive --------------------- */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     body {
         display: flex;
         flex-direction: column;

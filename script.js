@@ -35,7 +35,7 @@ window.onscroll = function () { // fonction appellée à chaque action de scroll
 
    
 
-    if (window.innerWidth > 600) {
+    if (window.innerWidth > 1000) {
         titre.style.width = titreWidth + "%";
         photo1.style.width = photo1Width + "%";
         photo2.style.width = photo2Width + "%";
@@ -44,7 +44,7 @@ window.onscroll = function () { // fonction appellée à chaque action de scroll
     // ------------------------ Menu --------------------------
     var menu = window.document.getElementById("navigation");
     
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 1000) {
         menu.style.position = "fixed"; // la valeur "sticky" crée une marge à droite de la page en version mobile
     } else {
         if (scrollVH < 440) {
