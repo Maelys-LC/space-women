@@ -813,7 +813,7 @@ footer p {
     #JetPropulsionLab .text p {
         display: block;
         text-align: justify;
-        width: 100%;
+        width: auto;
         margin: 0 10px 0 10px;
     }
     
@@ -830,7 +830,7 @@ footer p {
     #JetPropulsionLab .photo1 {
         position: absolute;
         right: 0px;
-        bottom: 5%;
+        bottom: 4%;
         width: 100vw;
     }
     
