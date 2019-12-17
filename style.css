@@ -775,8 +775,10 @@ footer p {
 
     
     #JetPropulsionLab .text p {
-        display: inline;
+        display: block;
         text-align: justify;
+        width: 100%;
+        margin: 0 10px 0 10px;
     }
     
     #JetPropulsionLab .rectangle {
@@ -833,7 +835,7 @@ footer p {
     
     #DorothyVaughan .container .blogText {
         width: 100%;
-        padding: 70px 0 0 50px;
+        padding: 0 10px 0 10px;
         max-width: 600px;
     }
     
@@ -871,7 +873,11 @@ footer p {
     
     #MargaretHamilton .container {
         width: 100%;
-        margin-right: 30px;
+        margin-right: 0px;
+    }
+
+    #MargaretHamilton .container .blogText {
+        margin: 0 10px 0 10px;
     }
     
     #MargaretHamilton .container .blogText h1 {
@@ -944,7 +950,7 @@ footer p {
         position: absolute;
         right: 0;
         bottom: -650px;
-        margin-right: 30px;
+        margin: 0 10px 0 10px;
     }
     
     #FrancesNorthcutt article p {
