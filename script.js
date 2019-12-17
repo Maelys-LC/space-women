@@ -14,9 +14,7 @@ window.onscroll = function () {
 
     if (titreWidth < 0) {
         titreWidth = 0;
-    }
-
-    titre.style.width = titreWidth + "%";
+    }    
 
     if (photo1Width > 100) {
         photo1Width = 100;
@@ -26,8 +24,7 @@ window.onscroll = function () {
         photo1Width = 0;
     }
 
-    photo1.style.width = photo1Width + "%";
-
+    
     if (photo2Width > 100) {
         photo2Width = 100;
     }
@@ -36,8 +33,13 @@ window.onscroll = function () {
         photo2Width = 0;
     }
 
-    photo2.style.width = photo2Width + "%";
+   
 
+    if(window.innerWidth > 600) {
+        titre.style.width = titreWidth + "%";
+        photo1.style.width = photo1Width + "%";
+        photo2.style.width = photo2Width + "%";
+    } 
 
     // ------------------------ Menu --------------------------
     var menu = window.document.getElementById("navigation");

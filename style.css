@@ -10,6 +10,7 @@ html {
 
 body {
     overflow-x: hidden;
+
 }
 
 h1 {
@@ -74,6 +75,9 @@ p {
     }
   }
   
+#accueil .titre .blasons {
+    display: none;
+}
 
 #accueil .photo1 {
     background: #685859;
@@ -342,6 +346,10 @@ p {
     color: #EBDDDA;
 }
 
+#JetPropulsionLab .text .mobile {
+    display: none;
+}
+
 #JetPropulsionLab .text p {
     display: none;
     width: 25vw;
@@ -408,7 +416,7 @@ p {
     text-align: right;
 }
 
-#DorothyVaughan .container .blogPhoto .nom {
+#DorothyVaughan .container .blogPhoto .mobile {
     display: none;
 }
 
@@ -673,7 +681,7 @@ footer p {
     }
 
     h1 {
-        font-size: 48px;
+        font-size: 40px;
     }
 
     /* -----------------------------Accueil--------------------------- */
@@ -684,6 +692,7 @@ footer p {
 
     #accueil .titre {
         height: 100vh;
+        position: relative;
     }
     
     #accueil .titre h1 {
@@ -691,6 +700,22 @@ footer p {
         font-size: 80px;
         margin: 0 0 0 5px;
     }    
+
+    #accueil .titre .blasons {
+        display: inline;
+    }
+
+    #accueil .titre .blasons .apollo {
+        width: 50%;
+        margin: 80px 0 0 5px;
+    }
+
+    #accueil .titre .blasons .skylab {
+        width: 40%;
+        position: absolute;
+        left: 40vw;
+        top: 60vh;
+    }
     
     #accueil .photo1 {
         display: none;
@@ -716,7 +741,7 @@ footer p {
 
     /* --------------------------Intro-------------------------- */
     #intro {
-        height: 100vh;
+        height: 130vh;
     }
     
     #intro .paragrapheIntro {
@@ -749,9 +774,9 @@ footer p {
         width: 100%;
         height: 100vh;
         transform: translateY(-20%) rotate(0deg);
-        position: relative;
-        left: 0;
-        transition: .5s;
+        position: static;
+        /* left: 0;
+        transition: .5s;*/
         z-index: 20;
     }
     
@@ -765,8 +790,16 @@ footer p {
     }
     
     #JetPropulsionLab .text h1 {
-        color: #5A7681;
         text-align: left;
+    }
+
+    #JetPropulsionLab .text .mobile {
+        display: inline;
+        color: #5A7681;
+    }
+
+    #JetPropulsionLab .text .desktop {
+        display: none;
     }
 
     #JetPropulsionLab .text .date {
@@ -794,7 +827,7 @@ footer p {
     #JetPropulsionLab .photo1 {
         position: absolute;
         right: 0px;
-        bottom: 2%;
+        bottom: 5%;
         width: 100vw;
     }
     
@@ -805,7 +838,7 @@ footer p {
 
     /* -------------------------Dorothy Vaughan------------------- */
     #DorothyVaughan {
-        height: 180vh;
+        height: 140vh;
         position: relative;
         overflow-x: hidden;
         
@@ -819,14 +852,22 @@ footer p {
     }
     
     
-    #DorothyVaughan .container .blogPhoto h1 {
-        text-align: right;
-        color: #EBDDDA;
-        background: #685859;
+    #DorothyVaughan .container .blogPhoto .desktop {
+        display: none;
     }
     
-    #DorothyVaughan .container .blogPhoto .nom {
+    #DorothyVaughan .container .blogPhoto .mobile {
         display: block;
+        text-align: right;        
+        background: #685859;
+        height: 20vh;
+        margin-top: 50px;
+    }
+
+    #DorothyVaughan .container .blogPhoto .mobile h1 {
+        transform: rotate(5deg);
+        color: #EBDDDA;
+        margin-right: 10px;
     }
     
     #DorothyVaughan .container .blogPhoto img {
@@ -835,7 +876,7 @@ footer p {
     
     #DorothyVaughan .container .blogText {
         width: 100%;
-        padding: 0 10px 0 10px;
+        padding: 20px 10px 0 10px;
         max-width: 600px;
     }
     
@@ -844,7 +885,7 @@ footer p {
     }
     
     #DorothyVaughan .photoDorothy {
-        width: 60%;
+        width: 70%;
         transform: translateX(0%) translateY(10%);
         position: absolute;
         right: 0;
@@ -854,7 +895,7 @@ footer p {
     #DorothyVaughan .rectangle {
         background: #EBDDDA;
         width: 100%;
-        height: 100vh;
+        height: 80vh;
         transform: rotate(45deg);
         position: absolute;
         top: 50vh;
@@ -868,7 +909,7 @@ footer p {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        height: 120vh;
+        height: 70vh;
     }
     
     #MargaretHamilton .container {
@@ -886,8 +927,7 @@ footer p {
     
     #MargaretHamilton .container .blogText .nom {
         color: #5A7681;
-        position: absolute;
-        right: 0;
+       
     }
     
     #MargaretHamilton .photoMargaret {
@@ -947,15 +987,16 @@ footer p {
         visibility: visible;
         opacity: 1;
         width: 100%;
-        position: absolute;
-        right: 0;
-        bottom: -650px;
-        margin: 0 10px 0 10px;
+        position: static;
+        margin: 0px 10px 0 10px;
     }
     
     #FrancesNorthcutt article p {
         color: #685859;
+        padding-top: 170px;
     }
+
+    
     
     #FrancesNorthcutt .container .photoFrancesOrbit {
         display: none;
@@ -965,33 +1006,26 @@ footer p {
         width: 100vw;  
         position: absolute;
         right: 0;
-        bottom: -220vw;
+        bottom: -200vw;
     }
     
 
 
     /* -----------------------Bonnie Dunbar------------------ */
     #BonnieDunbar {
-        height: 200vh;
+        height: 130vh;
         margin-top: 130vh;
         position: relative;
     }
     
     #BonnieDunbar .rectangle {
-        background: #EBDDDA;
-        height: 30vh;
-        width: 30vh;
-        transform: rotate(45deg);
-        position: absolute;
-        left: 0px;
-        right: -60px;
-        z-index: -7;
+        display: none;
     }
     
     #BonnieDunbar .titre h1 {
         transform: rotate(-20deg);
         text-align: left;
-        margin-left: 240px;
+        margin-left: 10px;
     }
     
     #BonnieDunbar .titre .nom {
@@ -1003,8 +1037,8 @@ footer p {
     }
     
     #BonnieDunbar .espace {
-        transform: translateY(500%);
-        width: 70%;
+        transform: translateY(290%);
+        width: 80%;
         margin-left: 0px;
         position: absolute;
         right: 0;
@@ -1014,8 +1048,8 @@ footer p {
     #BonnieDunbar .blogText {
         background: transparent;
         width: 100%;
-        position: absolute;
-        right: 0;
+        position: static;
+        /* right: 0; */
         display: flex;
         padding-left: 0px;
         z-index: -6;
@@ -1027,7 +1061,7 @@ footer p {
     
     #BonnieDunbar article {
         width: 100%;
-        transform: translateY(40%);
+        transform: translateY(20%);
     }
     
     
