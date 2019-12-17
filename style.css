@@ -803,8 +803,10 @@ footer p {
 
     /* -------------------------Dorothy Vaughan------------------- */
     #DorothyVaughan {
-        height: 150vh;
+        height: 180vh;
         position: relative;
+        overflow-x: hidden;
+        
     }
     
     #DorothyVaughan .container {
@@ -830,7 +832,7 @@ footer p {
     }
     
     #DorothyVaughan .container .blogText {
-        width: 60%;
+        width: 100%;
         padding: 70px 0 0 50px;
         max-width: 600px;
     }
@@ -868,7 +870,7 @@ footer p {
     }
     
     #MargaretHamilton .container {
-        width: 60%;
+        width: 100%;
         margin-right: 30px;
     }
     
@@ -919,7 +921,7 @@ footer p {
     #FrancesNorthcutt .container{
         background: transparent;
         height: 40vw;
-        width: 80%;
+        width: 100%;
         margin-top: 250px;
         transition: .3s;
         display: block;
@@ -1018,7 +1020,7 @@ footer p {
     }
     
     #BonnieDunbar article {
-        width: 50%;
+        width: 100%;
         transform: translateY(40%);
     }
     
