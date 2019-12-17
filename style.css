@@ -738,6 +738,9 @@ footer p {
        
     }    
 
+    #navigation {
+        display: none;
+    }
 
     /* --------------------------Intro-------------------------- */
     #intro {
@@ -771,7 +774,7 @@ footer p {
     
     #JetPropulsionLab .textContainer{
         background: transparent;
-        width: 100%;
+        width: auto;
         height: 100vh;
         transform: translateY(-20%) rotate(0deg);
         position: static;
@@ -782,7 +785,7 @@ footer p {
     
     #JetPropulsionLab .text {
         transform: rotate(0deg);
-        width: 100%;
+        width: auto;
         margin: auto;
         padding-top: 0px;
         padding-left: 0px;  
@@ -875,7 +878,7 @@ footer p {
     }
     
     #DorothyVaughan .container .blogText {
-        width: 100%;
+        width: auto;
         padding: 20px 10px 0 10px;
         max-width: 600px;
     }
@@ -913,7 +916,7 @@ footer p {
     }
     
     #MargaretHamilton .container {
-        width: 100%;
+        width: auto;
         margin-right: 0px;
     }
 
@@ -967,7 +970,7 @@ footer p {
     #FrancesNorthcutt .container{
         background: transparent;
         height: 40vw;
-        width: 100%;
+        width: auto;
         margin-top: 250px;
         transition: .3s;
         display: block;
@@ -986,7 +989,7 @@ footer p {
     #FrancesNorthcutt article {
         visibility: visible;
         opacity: 1;
-        width: 100%;
+        width: auto;
         position: static;
         margin: 0px 10px 0 10px;
     }
@@ -1047,7 +1050,7 @@ footer p {
     
     #BonnieDunbar .blogText {
         background: transparent;
-        width: 100%;
+        width: auto;
         position: static;
         /* right: 0; */
         display: flex;
@@ -1060,7 +1063,7 @@ footer p {
     }
     
     #BonnieDunbar article {
-        width: 100%;
+        width: auto;
         transform: translateY(20%);
     }
     
