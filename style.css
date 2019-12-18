@@ -26,6 +26,7 @@ p {
     text-indent: 10%;
 }
 
+
 /* ---------------------------- Accueil --------------------------- */
 
 #accueil {
@@ -139,10 +140,12 @@ p {
 }
 
 #accueil .blogQuote img {
-    width: 30%;
-    object-fit: cover;
+    /* width: 30%; */
+    /* object-fit: cover; */
     transform: translateY(60%);
+    height: auto;
 }
+
 
 /* ------------------------------- Intro ---------------------------- */
 
@@ -164,6 +167,7 @@ p {
     font-size: 64px;
     color: #5A7681;
 }
+
 
 /* --------------------------Menu--------------------------------- */
 
@@ -209,7 +213,6 @@ p {
     -webkit-touch-callout: none;
 }
 
-
 #menuToggle span {
     display: block;
     width: 33px;
@@ -231,18 +234,21 @@ p {
     transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked~span { /* transforme les traits du burger en croix */
+#menuToggle input:checked~span {
+    /* transforme les traits du burger en croix */
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #232323;
 }
 
-#menuToggle input:checked~span:nth-last-child(3) { /* cache le trait du milieu */
+#menuToggle input:checked~span:nth-last-child(3) {
+    /* cache le trait du milieu */
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked~span:nth-last-child(2) { /* fait tourner le dernier trait */
+#menuToggle input:checked~span:nth-last-child(2) {
+    /* fait tourner le dernier trait */
     transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -266,7 +272,8 @@ p {
     font-size: 22px;
 }
 
-#menuToggle input:checked~ul { /* pour l'effet de glissade depuis la gauche */
+#menuToggle input:checked~ul {
+    /* pour l'effet de glissade depuis la gauche */
     transform: none;
 }
 
@@ -331,6 +338,7 @@ p {
     bottom: 40%;
 }
 
+
 /* ----------------------------Dorothy Vaughan----------------- */
 
 #DorothyVaughan {
@@ -384,6 +392,7 @@ p {
     z-index: -1;
 }
 
+
 /* ---------------------Margaret Hamilton---------------- */
 
 #MargaretHamilton {
@@ -413,7 +422,7 @@ p {
 
 #MargaretHamilton .container .photos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 20px;
     height: 70vh;
 }
@@ -450,6 +459,7 @@ p {
 #MargaretHamilton .container .photo3:hover {
     transform: scale(1.4);
 }
+
 
 /* ---------------------Frances Northcutt----------------- */
 
@@ -505,6 +515,7 @@ p {
     transition-delay: .3s;
     transition-duration: .5s;
 }
+
 
 /* ---------------Bonnie Dunbar------------------- */
 
@@ -573,6 +584,7 @@ p {
     transform: translateY(40%);
 }
 
+
 /* ------------------------------Footer-------------------------- */
 
 footer {
@@ -622,9 +634,13 @@ footer p {
     }
 }
 
+
 /* --------------------------- Responsive --------------------- */
 
 @media screen and (max-width: 1000px) {
+    * {
+        max-width: 100vw;
+    }
     body {
         display: flex;
         flex-direction: column;
@@ -632,106 +648,91 @@ footer p {
     h1 {
         font-size: 40px;
     }
-
-
     /* -----------------------------Accueil--------------------------- */
     #accueil {
-        height: 100vh;
+        min-height: 100vh;
+        /* max-width: 100vw; */
         background: #685859;
+        height: auto;
     }
-
     #accueil .titre {
         position: relative;
+        height: auto;
+        min-height: 100vh;
+        max-width: 100vw;
     }
-
     #accueil .titre h1 {
         text-align: left;
         font-size: 80px;
         margin: 0 0 0 5px;
     }
-
     #accueil .titre .blasons {
         display: inline;
     }
-
     #accueil .titre .blasons .apollo {
-        width: 50%;
+        max-width: 50%;
+        max-height: 50%;
         margin: 80px 0 0 5px;
     }
-
     #accueil .titre .blasons .skylab {
-        width: 40%;
+        max-width: 40%;
+        max-height: 40%;
         position: absolute;
         left: 40vw;
         top: 60vh;
     }
-
     #accueil .photo1 {
         display: none;
     }
-
     #accueil .photo1 img {
         display: none;
     }
-
     #accueil .photo2 {
         display: none;
     }
-
     #accueil .photo2 img {
         display: none;
     }
-
     #accueil .blogQuote {
         display: none;
     }
-
     #navigation {
         display: none;
     }
-
-
-
     /* --------------------------Intro-------------------------- */
     #intro {
         height: auto;
         margin-bottom: 20vh;
     }
-
     #intro .paragrapheIntro {
         padding: 90px 0 0 0;
         margin: auto;
         width: 90%;
     }
-
     #intro .paragrapheIntro p {
         font-size: 24px;
         text-align: center;
     }
-
     #intro span {
         font-size: 36px;
     }
-
-
-
     /* -----------------------Jet Propulsion Lab-------------------- */
     #JetPropulsionLab {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 20vh;
+        height: auto;
     }
-
     #JetPropulsionLab .textContainer {
         background: transparent;
         width: auto;
-        height: 100vh;
+        height: auto;
         transform: rotate(0deg);
         position: static;
         z-index: 20;
+        margin-bottom: 10px;
     }
-
     #JetPropulsionLab .text {
         transform: rotate(0deg);
         width: auto;
@@ -739,32 +740,26 @@ footer p {
         padding-top: 0px;
         padding-left: 0px;
     }
-
     #JetPropulsionLab .text h1 {
         text-align: left;
         padding-left: 10px;
     }
-
     #JetPropulsionLab .text .mobile {
         display: inline;
         color: #5A7681;
     }
-
     #JetPropulsionLab .text .desktop {
         display: none;
     }
-
     #JetPropulsionLab .text .date {
         color: #685859;
     }
-
     #JetPropulsionLab .text p {
         display: block;
         text-align: justify;
         width: auto;
         margin: 0 10px 0 10px;
     }
-
     #JetPropulsionLab .rectangle {
         height: 30vh;
         width: 30vh;
@@ -774,117 +769,106 @@ footer p {
     }
     #JetPropulsionLab .photo1 {
         position: static;
-        width: 100vw;
+        width: auto;
     }
-
     #JetPropulsionLab .photo2 {
         display: none;
     }
-
-
     /* -------------------------Dorothy Vaughan------------------- */
     #DorothyVaughan {
         height: auto;
         overflow-x: hidden;
         padding-bottom: 25vh;
     }
-
     #DorothyVaughan .container {
         width: 100%;
         margin: auto;
         flex-direction: column;
     }
-
     #DorothyVaughan .container .blogPhoto .desktop {
         display: none;
     }
-
     #DorothyVaughan .container .blogPhoto .mobile {
         display: block;
         text-align: right;
         background: #685859;
-        height: 20vh;
+        height: auto;
         margin-top: 50px;
     }
-
     #DorothyVaughan .container .blogPhoto .mobile h1 {
         transform: rotate(5deg);
+        transform-origin: right;
         color: #EBDDDA;
-        margin-right: 10px;
+        /* margin-right: 40px; */
     }
-
     #DorothyVaughan .container .blogPhoto img {
         display: none;
     }
-
     #DorothyVaughan .container .blogText {
         width: auto;
         padding: 20px 10px 0 10px;
     }
-
     #DorothyVaughan .container .blogText h1 {
         display: none;
     }
-
     #DorothyVaughan .photoDorothy {
-        width: 70%;
+        width: 70vw;
         position: relative;
-        left: 30%;
+        left: 30vw;
         top: 10px;
         transform: none;
     }
-
     #DorothyVaughan .rectangle {
         height: 80vh;
         top: 15vh;
     }
-
-
     /* ----------------------Margaret Hamilton------------------ */
     #MargaretHamilton {
-        height: 70vh;
+        height: auto;
     }
-
     #MargaretHamilton .container {
         width: auto;
         margin-right: 0px;
     }
-
     #MargaretHamilton .container .blogText {
         margin: 0 10px 0 10px;
     }
-
     #MargaretHamilton .photoMargaret {
         display: none;
     }
-
-    #MargaretHamilton .container .photos img {
-        width: 15vh;
-        height: 15vh;
+    #MargaretHamilton .container .photos {
+        height: auto;
     }
-
+    #MargaretHamilton .container .photos img {
+        width: 100%;
+        height: 100%;
+    }
+    #MargaretHamilton .container .photos .photo1 {
+        align-self: flex-start;
+        width: 30%;
+    }
     #MargaretHamilton .container .photos .photo2 {
         align-self: flex-start;
+        width: 30%;
     }
-
     #MargaretHamilton .container .photos .photo3 {
         align-self: flex-start;
+        width: 30%;
     }
-
-
-
     /* ------------------------Frances Northcutt---------------- */
     #FrancesNorthcutt {
-        margin-top: 40vh;
+        margin-top: 20vh;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
     #FrancesNorthcutt .container {
         background: transparent;
         height: auto;
         width: auto;
-        margin-top: 20vh;
+        margin-top: 0;
     }
-
     #FrancesNorthcutt .container h1 {
         background: #685859;
         text-align: center;
@@ -892,7 +876,6 @@ footer p {
         margin-left: 0px;
         position: static;
     }
-
     #FrancesNorthcutt article {
         visibility: visible;
         opacity: 1;
@@ -900,45 +883,37 @@ footer p {
         position: static;
         margin: 20px 10px 20px 10px;
     }
-
     #FrancesNorthcutt article p {
         color: #685859;
     }
-
     #FrancesNorthcutt .container .photoFrancesOrbit {
         display: none;
     }
-
     #FrancesNorthcutt .photoFrances {
-        width: 100vw;
-        position: static
+        width: auto;
+        position: static;
+        max-height: 80vh;
+        max-width: 100vw;
     }
-
-
-
     /* -----------------------Bonnie Dunbar------------------ */
     #BonnieDunbar {
         height: auto;
-        margin-top: 130vh;
+        margin-top: 20vh;
     }
-
     #BonnieDunbar .rectangle {
         display: none;
     }
-
     #BonnieDunbar .titre h1 {
         transform: rotate(-20deg);
+        transform-origin: left;
         margin-left: 10px;
     }
-
     #BonnieDunbar .portrait {
         display: none;
     }
-
     #BonnieDunbar .espace {
         display: none;
     }
-
     #BonnieDunbar .espace-mobile {
         display: block;
         transform: none;
@@ -949,7 +924,6 @@ footer p {
         left: 20%;
         z-index: -5;
     }
-
     #BonnieDunbar .blogText {
         background: transparent;
         width: auto;
@@ -957,11 +931,9 @@ footer p {
         padding-left: 0px;
         margin: 0px 10px 0 10px;
     }
-
     #BonnieDunbar .blogText img {
         display: none;
     }
-    
     #BonnieDunbar article {
         width: auto;
         transform: none;
