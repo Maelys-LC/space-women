@@ -32,6 +32,7 @@ p {
 #accueil {
     height: 440vh;
     position: relative;
+    z-index: 1000;
 }
 
 #accueil .titre {
@@ -169,10 +170,11 @@ p {
 }
 
 
-/* --------------------------Menu--------------------------------- */
 
+
+/* ------------------------------Menu------------------- */
 #navigation {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 110;
@@ -645,13 +647,13 @@ footer p {
         display: flex;
         flex-direction: column;
     }
+
     h1 {
         font-size: 40px;
     }
     /* -----------------------------Accueil--------------------------- */
     #accueil {
         min-height: 100vh;
-        /* max-width: 100vw; */
         background: #685859;
         height: auto;
     }
@@ -696,9 +698,10 @@ footer p {
     #accueil .blogQuote {
         display: none;
     }
-    #navigation {
+    /* #navigation {
         display: none;
-    }
+    } */
+
     /* --------------------------Intro-------------------------- */
     #intro {
         height: auto;

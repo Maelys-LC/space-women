@@ -44,15 +44,17 @@ window.onscroll = function () { // fonction appellée à chaque action de scroll
     // ------------------------ Menu --------------------------
     var menu = window.document.getElementById("navigation");
     
-    if (window.innerWidth < 1000) {
-        menu.style.position = "fixed"; // la valeur "sticky" crée une marge à droite de la page en version mobile
-    } else {
-        if (scrollVH < 440) {
-            menu.style.position = "sticky"; // pour ne pas qu'il a apparaisse dans l'écran d'accueil
-        } else {
-            menu.style.position = "fixed"; // la valeur "sticky" entrait en conflit avec les hover des éléments par dessus lesquels le menu devait passer
-        }
-    }
+    // if (window.innerWidth < 1000) {
+    //     menu.style.position = "fixed"; // la valeur "sticky" crée une marge à droite de la page en version mobile
+    // } else {
+    //     if (scrollVH < 440) {
+    //         menu.style.position = "sticky"; // pour ne pas qu'il a apparaisse dans l'écran d'accueil
+    //     } else {
+    //         menu.style.position = "fixed"; // la valeur "sticky" entrait en conflit avec les hover des éléments par dessus lesquels le menu devait passer
+    //     }
+    // }    
+
+    
 }
 
 
