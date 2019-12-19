@@ -1,4 +1,3 @@
-
 // -------------------------------- Accueil------------------------------------
 window.onscroll = function () { // fonction appellée à chaque action de scroll
     var accueil = window.document.getElementById("accueil");
@@ -10,7 +9,7 @@ window.onscroll = function () { // fonction appellée à chaque action de scroll
     var titreWidth = 100 - scrollVH; // pour modifier la largeur de la div titre en fonction de combien on a scroll
     var photo1Width = 220 - scrollVH; // pour modifier la largeur de la div photo1 en fonction de combien on a scroll
     var photo2Width = 340 - scrollVH; // pour modifier la largeur de la div photo2 en fonction de combien on a scroll
-    
+    var links = document.querySelectorAll("nav a");
 
     if (titreWidth < 0) {
         titreWidth = 0;
