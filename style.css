@@ -603,9 +603,12 @@ footer p {
 }
 
 
+
+
+
 /* --------------------------- Hover---------------------- */
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1350px) {
     #JetPropulsionLab .textContainer:hover {
         transform: rotate(0deg);
         background: transparent;
@@ -636,7 +639,111 @@ footer p {
 }
 
 
-/* --------------------------- Responsive --------------------- */
+
+
+/* ------------------------------Responsive Titre--------------------- */
+@media screen and (max-height: 630px) {
+    #accueil .titre h1 {
+        font-size: 150px;
+    }
+}
+
+
+
+/* --------------------------------Responsive Tablet--------------------- */
+@media screen and (max-width: 1350px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    #accueil .titre h1 {
+        font-size: 150px;
+    }
+
+    #accueil .quote p {
+        font-size: 20px;
+    }
+    
+    #accueil .quote .mark {
+        font-size: 100px;
+    }
+    
+    #accueil .quote .source {
+        font-size: 18px;
+    }
+
+    #accueil .blogQuote img {
+        transform: translateY(90%);
+        height: 60vh;
+    }
+
+    #JetPropulsionLab .textContainer {
+        background: transparent;
+        width: auto;
+        height: auto;
+        transform: rotate(0deg);
+        position: static;
+        z-index: 20;
+        margin-bottom: 10px;
+    }
+    #JetPropulsionLab .text {
+        transform: rotate(0deg);
+        width: auto;
+        margin: auto;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+    #JetPropulsionLab .text h1 {
+        text-align: left;
+        padding-left: 10px;
+    }
+    #JetPropulsionLab .text .mobile {
+        display: inline;
+        color: #5A7681;
+    }
+    #JetPropulsionLab .text .desktop {
+        display: none;
+    }
+    #JetPropulsionLab .text .date {
+        color: #685859;
+    }
+    #JetPropulsionLab .text p {
+        display: block;
+        text-align: justify;
+        width: 30%;
+        margin: 0 10px 0 10px;
+    }
+
+    #DorothyVaughan .container .blogText {
+        width: 50%;
+    }
+
+    #FrancesNorthcutt .photoFrances {
+        display: none;
+    }
+
+    #FrancesNorthcutt .container {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #FrancesNorthcutt article {
+        visibility: visible;
+        opacity: 1;
+        width: 40%;
+    }
+
+    #FrancesNorthcutt .container .photoFrancesOrbit {
+        width: 50vw;
+        position: absolute;
+        left: 0px;
+        top: -80px;
+    }
+
+}
+
+
+/* --------------------------- Responsive Mobile--------------------- */
 
 @media screen and (max-width: 1000px) {
     * {
@@ -697,10 +804,7 @@ footer p {
     #accueil .blogQuote {
         display: none;
     }
-    /* #navigation {
-        display: none;
-    } */
-
+    
     #menuToggle {
         left: 10px;
     }
@@ -895,6 +999,7 @@ footer p {
         display: none;
     }
     #FrancesNorthcutt .photoFrances {
+        display: inline;
         width: auto;
         position: static;
         max-height: 80vh;
