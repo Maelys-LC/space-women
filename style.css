@@ -184,7 +184,7 @@ p {
     top: 50px;
     left: 50px;
     z-index: 1;
-    -webkit-user-select: none;
+    -webkit-user-select: none; /* l'utilisateur ne peut pas sélectionner le texte des liens*/
     user-select: none;
 }
 
@@ -210,7 +210,7 @@ p {
     /* hide this */
     z-index: 2;
     /* and place it over the hamburger */
-    -webkit-touch-callout: none;
+    -webkit-touch-callout: none; /* empèche d'afficher une légende en version tactile IOS*/
 }
 
 #menuToggle span {
@@ -224,10 +224,11 @@ p {
     z-index: 1;
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    /* cubic-bezier permet de définir une vitesse viariable pour l'animation */
 }
 
 #menuToggle span:first-child {
-    transform-origin: 0% 0%;
+    transform-origin: 0% 0%; /* sur la span, on définit le point de départ de la rotation sur l'axe x et y, ici l'extrémité gauche de la span */
 }
 
 #menuToggle span:nth-last-child(2) {
@@ -235,20 +236,21 @@ p {
 }
 
 #menuToggle input:checked~span {
-    /* transforme les traits du burger en croix */
     opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
+    background: #5A7681;
+}
+
+/* transforme les traits du burger en croix */
+#menuToggle input:checked~span:nth-last-child(4) {
+    transform: rotate(45deg) translate(-2px, -1px);   
 }
 
 #menuToggle input:checked~span:nth-last-child(3) {
-    /* cache le trait du milieu */
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
+    opacity: 0; /* cache le trait du milieu */
+    transform: scale(0.2, 0.2);
 }
 
 #menuToggle input:checked~span:nth-last-child(2) {
-    /* fait tourner le dernier trait */
     transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -259,11 +261,10 @@ p {
     padding: 50px;
     padding-top: 125px;
     background: #ededed;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
+    list-style-type: none; /* pour supprimer les symboles points de la liste */
+    -webkit-font-smoothing: antialiased; /* pour éviter un effet de clignotement dans safari */
+    transform-origin: 0% 0%; /* point de départ de l'animation en haut à gauche*/
+    transform: translate(-100%, 0); /* le menu est caché en dehors de l'écran à gauche */
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
@@ -272,9 +273,9 @@ p {
     font-size: 22px;
 }
 
-#menuToggle input:checked~ul {
+#menuToggle input:checked~#menu {
     /* pour l'effet de glissade depuis la gauche */
-    transform: none;
+    transform: none; /* on annule la position translate précédente*/
 }
 
 
@@ -699,6 +700,10 @@ footer p {
     /* #navigation {
         display: none;
     } */
+
+    #menuToggle {
+        left: 10px;
+    }
 
     /* --------------------------Intro-------------------------- */
     #intro {

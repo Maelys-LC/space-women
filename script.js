@@ -9,7 +9,7 @@ window.onscroll = function () { // fonction appellée à chaque action de scroll
     var titreWidth = 100 - scrollVH; // pour modifier la largeur de la div titre en fonction de combien on a scroll
     var photo1Width = 220 - scrollVH; // pour modifier la largeur de la div photo1 en fonction de combien on a scroll
     var photo2Width = 340 - scrollVH; // pour modifier la largeur de la div photo2 en fonction de combien on a scroll
-    var links = document.querySelectorAll("nav a");
+    
 
     if (titreWidth < 0) {
         titreWidth = 0;
@@ -33,15 +33,21 @@ window.onscroll = function () { // fonction appellée à chaque action de scroll
     }
 
    
-
     if (window.innerWidth > 1000) {
         titre.style.width = titreWidth + "%";
         photo1.style.width = photo1Width + "%";
         photo2.style.width = photo2Width + "%";
     } 
-
-
     
+}
+
+var links = document.querySelectorAll("nav a");
+var checkBox = document.querySelector("input")
+
+for (var i = 0; i < links.length; i++) {
+    links[i].onclick = function() {
+        checkBox.checked = false;
+    }
 }
 
 
