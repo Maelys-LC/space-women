@@ -141,8 +141,6 @@ p {
 }
 
 #accueil .blogQuote img {
-    /* width: 30%; */
-    /* object-fit: cover; */
     transform: translateY(60%);
     height: auto;
 }
@@ -802,7 +800,6 @@ footer p {
         transform: rotate(5deg);
         transform-origin: right;
         color: #EBDDDA;
-        /* margin-right: 40px; */
     }
     #DorothyVaughan .container .blogPhoto img {
         display: none;
