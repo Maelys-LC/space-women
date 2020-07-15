@@ -1,7 +1,7 @@
 # About this project
 At the end of a 6 weeks formation on HTML and CSS at Simplon in Paris, I was asked to produce a simple web site.
 
-I chose to talk about women who had an important part in space exploration, such as the Rocket Girls of Nasa, Dorothy Vaughan, Margaret Hamilton, and Frances Northcuttand Bonnie Dunbar. Of course this list is not exhaustive and many more women deserve to be knonw. 
+I chose to talk about women who had an important part in space exploration, such as the Rocket Girls of Nasa, Dorothy Vaughan, Margaret Hamilton, and Frances Northcuttand Bonnie Dunbar. Of course this list is not exhaustive and many more women deserve to be known. 
 
 # UX - UI
 First, I designed an UX wireframe and then an UI representation, using https://www.figma.com
