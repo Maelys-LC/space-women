@@ -3,6 +3,11 @@ At the end of a 6 weeks formation on HTML and CSS at Simplon in Paris, I was ask
 
 I chose to talk about women who had an important part in space exploration, such as the Rocket Girls of Nasa, Dorothy Vaughan, Margaret Hamilton, and Frances Northcuttand Bonnie Dunbar. Of course this list is not exhaustive and many more women deserve to be known. 
 
+# Languages and tools 
+HTML, CSS, JavaScript
+
+Visual Studio Code, Figma, Coolors, Netlify
+
 # UX - UI
 First, I designed an UX wireframe and then an UI representation, using https://www.figma.com
 I picked vintage and harmonious colours using https://coolors.co/
@@ -16,9 +21,3 @@ I picked vintage and harmonious colours using https://coolors.co/
 I used HTML, CSS, and a little bit of JS only for the scroll effect of the title section and the burger menu.
 
 Link to my web site: https://space-women.netlify.app/
-
-# Languages and tools 
-HTML, CSS, JavaScript
-
-Visual Studio Code, Figma, Coolors, Netlify
-
