@@ -4,19 +4,38 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    color: #685859;
+}
+
+p {
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    color: #685859;
+    font-size: 18px;
+    text-indent: 10%;
+}
+
 
 /* ---------------------------- Accueil --------------------------- */
+
 #accueil {
-    background: black;
-    color: white;
-    font-size: 200px;
-    font-family: 'Anton', sans-serif;
-    height: 400vh;
+    height: 440vh;
     position: relative;
+    z-index: 1000;
 }
 
 #accueil .titre {
-    background: black;
     height: 100vh;
     width: 100%;
     overflow-x: hidden;
@@ -25,108 +44,1009 @@
 }
 
 #accueil .titre h1 {
-    margin: 20px 0 0 30px;
     font-size: 200px;
+    font-family: 'Anton', sans-serif;
+    color: #EBDDDA;
+    margin: 20px 0 0 30px;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+#accueil .titre .blasons {
+    display: none;
 }
 
 #accueil .photo1 {
-    background: black;
+    background: #685859;
     position: fixed;
     overflow-x: hidden;
     z-index: 3;
 }
 
 #accueil .photo1 img {
-    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
-#accueil .photo2 {   
-    background: black;
-    position: fixed;    
+#accueil .photo2 {
+    background: #685859;
+    position: fixed;
     overflow-x: hidden;
     z-index: 2;
 }
 
-#accueil .photo2 img{
-    width: 100vw;
+#accueil .photo2 img {
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
-#accueil .quote {
-    padding: 70px 30px 0 30px;
-    height: 70vh ;
-    color: white;
-    text-align: center;
-    font-size: 30px;
-    font-style: italic;
-    font-family: 'Space Mono', monospace;
+#accueil .blogQuote {
+    height: 100vh;
+    background: #685859;
     position: sticky;
     top: 0;
     z-index: 1;
-    overflow: hidden;
+    display: flex;
 }
 
-#accueil .quote span {
+#accueil .quote {
+    width: 50%;
+    padding: 160px 30px 0 30px;
+    margin-right: 30px;
+}
+
+#accueil .quote p {
+    color: #EBDDDA;
+    text-align: justify;
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+#accueil .quote .mark {
+    font-size: 120px;
+    color: #5A7681;
+}
+
+#accueil .quote .source {
     font-size: 20px;
     font-style: normal;
+    font-weight: lighter;
 }
 
+#accueil .blogQuote img {
+    transform: translateY(60%);
+    height: auto;
+}
 
 
 /* ------------------------------- Intro ---------------------------- */
+
 #intro {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #intro .paragrapheIntro {
-    width: 80%;
-}
-
-#intro p {
+    padding: 100px 0 0 30px;
+    width: 45%;
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 36px;
     text-align: justify;
+    text-indent: 10%;
+    color: #685859;
+}
+
+#intro span {
+    font-size: 64px;
+    color: #5A7681;
 }
 
 
-/* --------------------- Femme 1 -------------------- */
-#femme1 {
-    height: 200vh;
+
+
+/* ------------------------------Menu------------------- */
+#navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
 }
 
-#femme1 .textContainer {
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none; /* l'utilisateur ne peut pas sélectionner le texte des liens*/
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #685859;
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: #5A7681;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
     position: absolute;
-    top: 550vh;
-    left: -100px;
-    background: black;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none; /* empèche d'afficher une légende en version tactile IOS*/
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    /* cubic-bezier permet de définir une vitesse viariable pour l'animation */
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%; /* sur la span, on définit le point de départ de la rotation sur l'axe x et y, ici l'extrémité gauche de la span */
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    background: #5A7681;
+}
+
+/* transforme les traits du burger en croix */
+#menuToggle input:checked~span:nth-last-child(4) {
+    transform: rotate(45deg) translate(-2px, -1px);   
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0; /* cache le trait du milieu */
+    transform: scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none; /* pour supprimer les symboles points de la liste */
+    -webkit-font-smoothing: antialiased; /* pour éviter un effet de clignotement dans safari */
+    transform-origin: 0% 0%; /* point de départ de l'animation en haut à gauche*/
+    transform: translate(-100%, 0); /* le menu est caché en dehors de l'écran à gauche */
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked~#menu {
+    /* pour l'effet de glissade depuis la gauche */
+    transform: none; /* on annule la position translate précédente*/
+}
+
+
+/* --------------------- JetPropulsionLab -------------------- */
+
+#JetPropulsionLab {
+    height: 150vh;
+    position: relative;
+}
+
+#JetPropulsionLab .textContainer {
+    background: #685859;
+    width: 65vh;
+    height: 65vh;
+    transform: translateY(60%) rotate(45deg);
+    position: relative;
+    left: -70px;
+    transition: .5s;
+}
+
+#JetPropulsionLab .text {
+    transform: rotate(-45deg);
+    width: 100%;
+    padding-top: 75px;
+    padding-left: 160px;
+}
+
+#JetPropulsionLab .text h1 {
+    color: #EBDDDA;
+}
+
+#JetPropulsionLab .text .mobile {
+    display: none;
+}
+
+#JetPropulsionLab .text p {
+    display: none;
+    width: 25vw;
+}
+
+#JetPropulsionLab .rectangle {
+    background: #EBDDDA;
+    height: 105vh;
+    width: 105vh;
+    transform: translateY(-40%) rotate(45deg);
+    position: absolute;
+    right: -30px;
+}
+
+#JetPropulsionLab .photo1 {
+    position: absolute;
+    right: 0px;
+    bottom: 2%;
+    width: 25vw;
+}
+
+#JetPropulsionLab .photo2 {
+    width: 50%;
+    position: absolute;
+    right: 8%;
+    bottom: 40%;
+}
+
+
+/* ----------------------------Dorothy Vaughan----------------- */
+
+#DorothyVaughan {
+    height: 150vh;
+    position: relative;
+}
+
+#DorothyVaughan .container {
+    width: max-content;
+    margin: auto;
+    display: flex;
+}
+
+#DorothyVaughan .container .blogPhoto h1 {
+    text-align: right;
+}
+
+#DorothyVaughan .container .blogPhoto .mobile {
+    display: none;
+}
+
+#DorothyVaughan .container .blogPhoto img {
+    max-width: 100%;
+    max-height: 600px;
+}
+
+#DorothyVaughan .container .blogText {
+    width: 60%;
+    padding: 70px 0 0 50px;
+    max-width: 600px;
+}
+
+#DorothyVaughan .container .blogText h1 {
+    text-align: left;
+    color: #5A7681;
+}
+
+#DorothyVaughan .photoDorothy {
     width: 40%;
+    transform: translateX(90%) translateY(-20%);
+}
+
+#DorothyVaughan .rectangle {
+    background: #EBDDDA;
+    width: 100%;
     height: 100vh;
     transform: rotate(45deg);
-}
-
-#femme1 .text {
-    transform: rotate(-45deg);
-    width: 70%;
-    height: 60vh;
-    margin: 75px 0 0 90px;
-    z-index: 5;
-}
-
-#femme1 .text p {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    font-size: 18px;
-    text-align: justify;
-}
-
-#femme1 .photo {
     position: absolute;
-    top: 520vh;
-    right: -100px;
-    background: lightgrey;
+    top: 50vh;
+    left: 20%;
+    z-index: -1;
+}
+
+
+/* ---------------------Margaret Hamilton---------------- */
+
+#MargaretHamilton {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 120vh;
+}
+
+#MargaretHamilton .container {
+    width: 60%;
+    margin-right: 30px;
+}
+
+#MargaretHamilton .container .blogText h1 {
+    text-align: right;
+}
+
+#MargaretHamilton .container .blogText .nom {
+    color: #5A7681;
+}
+
+#MargaretHamilton .photoMargaret {
+    width: 35vw;
+    margin-top: 210px;
+}
+
+#MargaretHamilton .container .photos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    height: 70vh;
+}
+
+#MargaretHamilton .container .photos img {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 5px;
+}
+
+#MargaretHamilton .container .photos .photo1 {
+    align-self: flex-start;
+    transition: .5s;
+}
+
+#MargaretHamilton .container .photos .photo2 {
+    align-self: center;
+    transition: .5s;
+}
+
+#MargaretHamilton .container .photos .photo3 {
+    align-self: flex-end;
+    transition: .5s;
+}
+
+#MargaretHamilton .container .photo1:hover {
+    transform: scale(1.4);
+}
+
+#MargaretHamilton .container .photo2:hover {
+    transform: scale(1.4);
+}
+
+#MargaretHamilton .container .photo3:hover {
+    transform: scale(1.4);
+}
+
+
+/* ---------------------Frances Northcutt----------------- */
+
+#FrancesNorthcutt {
+    height: 80vh;
+    position: relative;
+}
+
+#FrancesNorthcutt .container {
+    background: #685859;
+    height: 40vw;
+    width: 80%;
+    margin-top: 250px;
+    transition: .3s;
+    display: block;
+    position: relative;
+}
+
+#FrancesNorthcutt .container h1 {
+    text-align: left;
+    color: #EBDDDA;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 10px;
+}
+
+#FrancesNorthcutt article {
+    visibility: hidden;
+    opacity: 0;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    margin-right: 30px;
+}
+
+#FrancesNorthcutt article p {
+    color: #EBDDDA;
+}
+
+#FrancesNorthcutt .container .photoFrancesOrbit {
+    width: 50vw;
+    position: absolute;
+    left: 200px;
+    top: -80px;
+}
+
+#FrancesNorthcutt .photoFrances {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    bottom: -10vw;
+    transition-delay: .3s;
+    transition-duration: .5s;
+}
+
+
+/* ---------------Bonnie Dunbar------------------- */
+
+#BonnieDunbar {
+    height: 200vh;
+    margin-top: 60vh;
+    position: relative;
+}
+
+#BonnieDunbar .rectangle {
+    background: #EBDDDA;
+    height: 600px;
+    width: 700px;
+    transform: rotate(45deg);
+    position: absolute;
+    left: -90px;
+    z-index: -7;
+}
+
+#BonnieDunbar .titre h1 {
+    text-align: left;
+    margin-left: 240px;
+}
+
+#BonnieDunbar .titre .nom {
+    color: #5A7681;
+}
+
+#BonnieDunbar .portrait {
     width: 40%;
-    height: 100vh;
-    transform: rotate(45deg); 
+    position: absolute;
+    right: 0;
+    transform: translateY(-40%);
+}
+
+#BonnieDunbar .espace {
+    transform: translateY(40%);
+    width: 40%;
+    margin-left: 200px;
+    z-index: -5;
+}
+
+#BonnieDunbar .espace-mobile {
+    display: none;
+}
+
+#BonnieDunbar .blogText {
+    background: #EBDDDA;
+    width: 70%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    padding-left: 150px;
+    z-index: -6;
+}
+
+#BonnieDunbar .blogText img {
+    width: 40%;
+    object-fit: cover;
+    margin-right: 30px;
+    transform: translateY(20%);
+}
+
+#BonnieDunbar article {
+    width: 50%;
+    transform: translateY(40%);
+}
+
+
+/* ------------------------------Footer-------------------------- */
+
+footer {
+    height: 10vh;
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 10px;
+}
+
+footer p {
+    font-size: 16px;
+    text-indent: 0;
+}
+
+
+
+
+
+/* --------------------------- Hover---------------------- */
+
+@media screen and (min-width: 1350px) {
+    #JetPropulsionLab .textContainer:hover {
+        transform: rotate(0deg);
+        background: transparent;
+    }
+    #JetPropulsionLab .textContainer:hover .text {
+        transform: translateY(30%) rotate(0deg);
+        height: 90vh;
+    }
+    #JetPropulsionLab .textContainer:hover h1 {
+        color: #685859;
+        font-size: 36px;
+    }
+    #JetPropulsionLab .textContainer:hover p {
+        display: block;
+    }
+    #FrancesNorthcutt .container:hover {
+        width: 100%;
+    }
+    #FrancesNorthcutt .container:hover article {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: .3s;
+        transition-duration: .5s;
+    }
+    #FrancesNorthcutt:hover .photoFrances {
+        display: none;
+    }
+}
+
+
+
+
+/* ------------------------------Responsive Titre--------------------- */
+@media screen and (max-height: 630px) {
+    #accueil .titre h1 {
+        font-size: 150px;
+    }
+}
+
+
+
+/* --------------------------------Responsive Tablet--------------------- */
+@media screen and (max-width: 1350px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    #accueil .titre h1 {
+        font-size: 150px;
+    }
+
+    #accueil .quote p {
+        font-size: 20px;
+    }
+    
+    #accueil .quote .mark {
+        font-size: 100px;
+    }
+    
+    #accueil .quote .source {
+        font-size: 18px;
+    }
+
+    #accueil .blogQuote img {
+        transform: translateY(90%);
+        height: 60vh;
+    }
+
+    #JetPropulsionLab .textContainer {
+        background: transparent;
+        width: auto;
+        height: auto;
+        transform: rotate(0deg);
+        position: static;
+        z-index: 20;
+        margin-bottom: 10px;
+    }
+    #JetPropulsionLab .text {
+        transform: rotate(0deg);
+        width: auto;
+        margin: auto;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+    #JetPropulsionLab .text h1 {
+        text-align: left;
+        padding-left: 10px;
+    }
+    #JetPropulsionLab .text .mobile {
+        display: inline;
+        color: #5A7681;
+    }
+    #JetPropulsionLab .text .desktop {
+        display: none;
+    }
+    #JetPropulsionLab .text .date {
+        color: #685859;
+    }
+    #JetPropulsionLab .text p {
+        display: block;
+        text-align: justify;
+        width: 30%;
+        margin: 0 10px 0 10px;
+    }
+
+    #DorothyVaughan .container .blogText {
+        width: 50%;
+    }
+
+    #FrancesNorthcutt .photoFrances {
+        display: none;
+    }
+
+    #FrancesNorthcutt .container {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #FrancesNorthcutt article {
+        visibility: visible;
+        opacity: 1;
+        width: 40%;
+    }
+
+    #FrancesNorthcutt .container .photoFrancesOrbit {
+        width: 50vw;
+        position: absolute;
+        left: 0px;
+        top: -80px;
+    }
+
+}
+
+
+/* --------------------------- Responsive Mobile--------------------- */
+
+@media screen and (max-width: 1000px) {
+    * {
+        max-width: 100vw;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+    /* -----------------------------Accueil--------------------------- */
+    #accueil {
+        min-height: 100vh;
+        background: #685859;
+        height: auto;
+    }
+    #accueil .titre {
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+        max-width: 100vw;
+    }
+    #accueil .titre h1 {
+        text-align: left;
+        font-size: 80px;
+        margin: 0 0 0 5px;
+    }
+    #accueil .titre .blasons {
+        display: inline;
+    }
+    #accueil .titre .blasons .apollo {
+        max-width: 50%;
+        max-height: 50%;
+        margin: 80px 0 0 5px;
+    }
+    #accueil .titre .blasons .skylab {
+        max-width: 40%;
+        max-height: 40%;
+        position: absolute;
+        left: 40vw;
+        top: 60vh;
+    }
+    #accueil .photo1 {
+        display: none;
+    }
+    #accueil .photo1 img {
+        display: none;
+    }
+    #accueil .photo2 {
+        display: none;
+    }
+    #accueil .photo2 img {
+        display: none;
+    }
+    #accueil .blogQuote {
+        display: none;
+    }
+    
+    #menuToggle {
+        left: 10px;
+    }
+
+    /* --------------------------Intro-------------------------- */
+    #intro {
+        height: auto;
+        margin-bottom: 20vh;
+    }
+    #intro .paragrapheIntro {
+        padding: 90px 0 0 0;
+        margin: auto;
+        width: 90%;
+    }
+    #intro .paragrapheIntro p {
+        font-size: 24px;
+        text-align: left;
+    }
+    #intro span {
+        font-size: 36px;
+    }
+    /* -----------------------Jet Propulsion Lab-------------------- */
+    #JetPropulsionLab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20vh;
+        height: auto;
+    }
+    #JetPropulsionLab .textContainer {
+        background: transparent;
+        width: auto;
+        height: auto;
+        transform: rotate(0deg);
+        position: static;
+        z-index: 20;
+        margin-bottom: 10px;
+    }
+    #JetPropulsionLab .text {
+        transform: rotate(0deg);
+        width: auto;
+        margin: auto;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+    #JetPropulsionLab .text h1 {
+        text-align: left;
+        padding-left: 10px;
+    }
+    #JetPropulsionLab .text .mobile {
+        display: inline;
+        color: #5A7681;
+    }
+    #JetPropulsionLab .text .desktop {
+        display: none;
+    }
+    #JetPropulsionLab .text .date {
+        color: #685859;
+    }
+    #JetPropulsionLab .text p {
+        display: block;
+        text-align: justify;
+        width: auto;
+        margin: 0 10px 0 10px;
+    }
+    #JetPropulsionLab .rectangle {
+        height: 30vh;
+        width: 30vh;
+        transform: translateY(60%) rotate(45deg);
+        right: 0;
+        left: -30px;
+    }
+    #JetPropulsionLab .photo1 {
+        position: static;
+        width: auto;
+    }
+    #JetPropulsionLab .photo2 {
+        display: none;
+    }
+    /* -------------------------Dorothy Vaughan------------------- */
+    #DorothyVaughan {
+        height: auto;
+        overflow-x: hidden;
+        padding-bottom: 25vh;
+    }
+    #DorothyVaughan .container {
+        width: 100%;
+        margin: auto;
+        flex-direction: column;
+    }
+    #DorothyVaughan .container .blogPhoto .desktop {
+        display: none;
+    }
+    #DorothyVaughan .container .blogPhoto .mobile {
+        display: block;
+        text-align: right;
+        background: #685859;
+        height: auto;
+        margin-top: 50px;
+    }
+    #DorothyVaughan .container .blogPhoto .mobile h1 {
+        transform: rotate(5deg);
+        transform-origin: right;
+        color: #EBDDDA;
+    }
+    #DorothyVaughan .container .blogPhoto img {
+        display: none;
+    }
+    #DorothyVaughan .container .blogText {
+        width: auto;
+        padding: 20px 10px 0 10px;
+    }
+    #DorothyVaughan .container .blogText h1 {
+        display: none;
+    }
+    #DorothyVaughan .photoDorothy {
+        width: 70vw;
+        position: relative;
+        left: 30vw;
+        top: 10px;
+        transform: none;
+    }
+    #DorothyVaughan .rectangle {
+        height: 80vh;
+        top: 15vh;
+    }
+    /* ----------------------Margaret Hamilton------------------ */
+    #MargaretHamilton {
+        height: auto;
+    }
+    #MargaretHamilton .container {
+        width: auto;
+        margin-right: 0px;
+    }
+    #MargaretHamilton .container .blogText {
+        margin: 0 10px 0 10px;
+    }
+    #MargaretHamilton .photoMargaret {
+        display: none;
+    }
+    #MargaretHamilton .container .photos {
+        height: auto;
+    }
+    #MargaretHamilton .container .photos img {
+        width: 100%;
+        height: 100%;
+    }
+    #MargaretHamilton .container .photos .photo1 {
+        align-self: flex-start;
+        width: 30%;
+    }
+    #MargaretHamilton .container .photos .photo2 {
+        align-self: flex-start;
+        width: 30%;
+    }
+    #MargaretHamilton .container .photos .photo3 {
+        align-self: flex-start;
+        width: 30%;
+    }
+    /* ------------------------Frances Northcutt---------------- */
+    #FrancesNorthcutt {
+        margin-top: 20vh;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #FrancesNorthcutt .container {
+        background: transparent;
+        height: auto;
+        width: auto;
+        margin-top: 0;
+    }
+    #FrancesNorthcutt .container h1 {
+        background: #685859;
+        text-align: center;
+        color: #EBDDDA;
+        margin-left: 0px;
+        position: static;
+    }
+    #FrancesNorthcutt article {
+        visibility: visible;
+        opacity: 1;
+        width: auto;
+        position: static;
+        margin: 20px 10px 20px 10px;
+    }
+    #FrancesNorthcutt article p {
+        color: #685859;
+    }
+    #FrancesNorthcutt .container .photoFrancesOrbit {
+        display: none;
+    }
+    #FrancesNorthcutt .photoFrances {
+        display: inline;
+        width: auto;
+        position: static;
+        max-height: 80vh;
+        max-width: 100vw;
+    }
+    /* -----------------------Bonnie Dunbar------------------ */
+    #BonnieDunbar {
+        height: auto;
+        margin-top: 20vh;
+    }
+    #BonnieDunbar .rectangle {
+        display: none;
+    }
+    #BonnieDunbar .titre h1 {
+        transform: rotate(-20deg);
+        transform-origin: left;
+        margin-left: 10px;
+    }
+    #BonnieDunbar .portrait {
+        display: none;
+    }
+    #BonnieDunbar .espace {
+        display: none;
+    }
+    #BonnieDunbar .espace-mobile {
+        display: block;
+        transform: none;
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 0px;
+        position: relative;
+        left: 20%;
+        z-index: -5;
+    }
+    #BonnieDunbar .blogText {
+        background: transparent;
+        width: auto;
+        position: static;
+        padding-left: 0px;
+        margin: 0px 10px 0 10px;
+    }
+    #BonnieDunbar .blogText img {
+        display: none;
+    }
+    #BonnieDunbar article {
+        width: auto;
+        transform: none;
+        margin-top: 50px;
+    }
 }
